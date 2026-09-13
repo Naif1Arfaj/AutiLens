@@ -1,0 +1,72 @@
+# AutiLens AI - default experiment configuration
+seed: 1337
+
+paths:
+  # Root of the AV-ASD dataset folder that was downloaded.
+  dataset_root: "../avasd_data"
+  clips_video: "../avasd_data/clips_video"
+  clips_audio: "../avasd_data/clips_audio"
+  csv_dir: "../avasd_data/csvs"
+  # Generated / cached artefacts (relative to project root).
+  metadata_dir: "data/metadata"
+  splits_dir: "data/splits"
+  processed_dir: "data/processed"
+  models_dir: "models"
+  reports_dir: "reports"
+
+labels:
+  - "Absence or Avoidance of Eye Contact"
+  - "Aggressive Behavior"
+  - "Hyper- or Hyporeactivity to Sensory Input"
+  - "Non-Responsiveness to Verbal Interaction"
+  - "Non-Typical Language"
+  - "Object Lining-Up"
+  - "Self-Hitting or Self-Injurious Behavior"
+  - "Self-Spinning or Spinning Objects"
+  - "Upper Limb Stereotypies"
+  - "Background"
+
+video:
+  num_frames: 16          # frames sampled per clip
+  frame_size: 112         # square crop fed to the backbone
+  fps_sample: null        # if set, sample at fixed fps instead of uniform num_frames
+
+audio:
+  sample_rate: 16000
+  n_mels: 64
+  n_fft: 400
+  hop_length: 160
+  max_seconds: 10.0
+
+model:
+  modality: "av"          # one of: vision | audio | av  (used for ablation)
+  # 2D + temporal head:  resnet18 | resnet34 | efficientnet_b0
+  # 3D Kinetics backbone: r2plus1d_18 | mc3_18 | r3d_18   (temporal head bypassed)
+  vision_backbone: "r2plus1d_18"
+  freeze_backbone: true
+  embed_dim: 256
+  temporal: "transformer" # one of: mean | lstm | transformer  (2D backbones only)
+  temporal_layers: 1
+  temporal_heads: 4
+  dropout: 0.3
+
+train:
+  epochs: 40
+  batch_size: 8
+  lr: 0.0003
+  weight_decay: 0.0001
+  num_workers: 0
+  device: "auto"          # auto | cpu | mps | cuda
+  pos_weight_clip: 10.0   # cap on positive class weighting for BCE
+  early_stop_patience: 12
+  monitor: "val_macro_f1"
+  loss: "focal"           # bce | focal
+  focal_gamma: 2.0
+
+eval:
+  default_threshold: 0.5
+  tune_thresholds: true   # pick per-class thresholds on the validation set
+  tta: true               # test-time augmentation: average original + h-flip
+
+cv:
+  folds: 5                # subject-disjoint k-fold (merges train+val, keeps test held out)

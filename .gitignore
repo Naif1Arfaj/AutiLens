@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/
+
+# generated artefacts
+data/processed/
+data/metadata/
+data/splits/
+models/*.pt
+models/*_train.json
+reports/*.png
+reports/*_metrics.json
+reports/*.log
+
+# never commit dataset media
+*.mp4
+*.wav
+*.mkv
+*.webm

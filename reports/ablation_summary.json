@@ -1,0 +1,52 @@
+[
+  {
+    "model": "vision_mean",
+    "modality": "vision",
+    "macro_f1": 0.31656903180378887,
+    "macro_auprc": 0.3211757709477482,
+    "macro_auroc": 0.5504650966527663,
+    "micro_f1": 0.3343465045592705,
+    "ece": 0.20278413576331547,
+    "n_samples": 47
+  },
+  {
+    "model": "vision_lstm",
+    "modality": "vision",
+    "macro_f1": 0.2783209556346438,
+    "macro_auprc": 0.30278174063442276,
+    "macro_auroc": 0.544465139369881,
+    "micro_f1": 0.3044776119402985,
+    "ece": 0.22170642896535547,
+    "n_samples": 47
+  },
+  {
+    "model": "vision_transformer",
+    "modality": "vision",
+    "macro_f1": 0.2640231788973048,
+    "macro_auprc": 0.31113516986240103,
+    "macro_auroc": 0.578645018348866,
+    "micro_f1": 0.3404255319148936,
+    "ece": 0.16778711732873255,
+    "n_samples": 47
+  },
+  {
+    "model": "audio_transformer",
+    "modality": "audio",
+    "macro_f1": 0.30537537516945684,
+    "macro_auprc": 0.2628728425224622,
+    "macro_auroc": 0.5397536204681912,
+    "micro_f1": 0.3490566037735849,
+    "ece": 0.25380316448814055,
+    "n_samples": 47
+  },
+  {
+    "model": "av_transformer",
+    "modality": "av",
+    "macro_f1": 0.262758293182022,
+    "macro_auprc": 0.3463111383043761,
+    "macro_auroc": 0.5721540322182916,
+    "micro_f1": 0.3391003460207612,
+    "ece": 0.17747517135464885,
+    "n_samples": 47
+  }
+]
