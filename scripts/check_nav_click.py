@@ -68,13 +68,33 @@ async def cdp(ws_url: str, app_url: str) -> dict:
 
         await asyncio.sleep(3)          # let the shim's iframe load and wire up
         wired = await js("!!" + link + ".dataset.alWired")
+
+        # Hit-test FIRST. An earlier version of this script called .click() on the
+        # element, which dispatches straight to it and skips hit-testing -- so it
+        # passed while Streamlit's header (z-index 999990) sat over the bar and
+        # ate every real click. Ask the page what is actually on top.
+        probe = await js("(() => {"
+                         "  const a = " + link + ";"
+                         "  const r = a.getBoundingClientRect();"
+                         "  const x = Math.round(r.left + r.width / 2);"
+                         "  const y = Math.round(r.top + r.height / 2);"
+                         "  const top = document.elementFromPoint(x, y);"
+                         "  return {x: x, y: y, hits: top === a || a.contains(top),"
+                         "          blocker: top ? (top.tagName + '.' + top.className) : null};"
+                         "})()")
+
         before = await js(SCROLL_Y)
-        await js(link + ".click()")
+        # A real mouse click at those coordinates -- this one goes through
+        # hit-testing exactly as a user's click does.
+        for kind in ("mousePressed", "mouseReleased"):
+            await send("Input.dispatchMouseEvent", type=kind, x=probe["x"],
+                       y=probe["y"], button="left", clickCount=1)
         await asyncio.sleep(2)          # smooth scroll needs time to settle
         after = await js(SCROLL_Y)
         top = await js("Math.round(document.getElementById('behaviors')"
                        ".getBoundingClientRect().top)")
-        return {"wired": wired, "before": before, "after": after, "target_top": top}
+        return {"wired": wired, "before": before, "after": after, "target_top": top,
+                "hits": probe["hits"], "blocker": probe["blocker"]}
 
 
 def main() -> int:
@@ -120,12 +140,15 @@ def main() -> int:
 
         moved = r["after"] - r["before"]
         print(f"\n  handler attached to the link : {bool(r['wired'])}")
-        print(f"  scroll before click          : {r['before']}px")
-        print(f"  scroll after click           : {r['after']}px  (moved {moved}px)")
+        print(f"  link is the top element      : {r['hits']}"
+              f"{'' if r['hits'] else '  <-- blocked by ' + str(r['blocker'])}")
+        print(f"  scroll before real click     : {r['before']}px")
+        print(f"  scroll after real click      : {r['after']}px  (moved {moved}px)")
         print(f"  target distance from viewport: {r['target_top']}px\n")
 
-        ok = bool(r["wired"]) and moved > 100 and abs(r["target_top"]) < 140
-        print("PASS  clicking a nav link scrolls to its section" if ok else
+        ok = (bool(r["wired"]) and r["hits"] and moved > 100
+              and abs(r["target_top"]) < 140)
+        print("PASS  a real click on a nav link scrolls to its section" if ok else
               "FAIL  the nav link did not navigate")
         return 0 if ok else 1
     finally:

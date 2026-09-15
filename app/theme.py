@@ -100,6 +100,8 @@ def inject() -> None:
   --al-track:{t['track']}; --al-shadow:{t['shadow']};
   --al-r:14px; --al-r-sm:9px;
   --z-base:10; --z-sticky:20; --z-overlay:30; --z-modal:50;
+  /* above Streamlit's own header, which sits at 999990 */
+  --z-nav:999991;
 }}
 
 /* ---------- base ------------------------------------------------------- */
@@ -306,10 +308,15 @@ a:focus-visible, button:focus-visible, input:focus-visible,
    short container, so a sticky child has nothing tall to stick within. Fixed
    positioning is anchored to the viewport instead, and .block-container gets
    extra top padding on the landing so nothing hides underneath. */
-/* Streamlit's own toolbar floats top-right. The Deploy button sat on top of our
-   CTA, so it is hidden and the bar keeps clearance for the remaining menu. */
+/* Streamlit's header is position:absolute at z-index 999990 over the top 60px --
+   exactly where this bar sits. Transparent, so the nav showed through it, but it
+   still won every hit-test and swallowed every click: the links were visible and
+   completely inert. The nav has to outrank it, and the header itself must stop
+   capturing pointer events -- with the toolbar exempted so its menu still works. */
+header[data-testid="stHeader"] {{ pointer-events:none; }}
+header[data-testid="stHeader"] [data-testid="stToolbar"] {{ pointer-events:auto; }}
 [data-testid="stAppDeployButton"] {{ display:none !important; }}
-.al-nav {{ position:fixed; top:0; left:0; right:0; z-index:var(--z-sticky);
+.al-nav {{ position:fixed; top:0; left:0; right:0; z-index:var(--z-nav);
   display:flex; align-items:center; gap:1.1rem; flex-wrap:wrap;
   padding:.62rem clamp(1rem,6vw,2.2rem);
   padding-right:calc(clamp(1rem,6vw,2.2rem) + 44px);
