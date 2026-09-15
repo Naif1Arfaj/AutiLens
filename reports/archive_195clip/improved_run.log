@@ -1,0 +1,684 @@
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:379: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/Users/naifalarfaj/Library/Python/3.9/lib/python/site-packages/sklearn/metrics/_ranking.py:1033: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+device=mps  modality=vision  backbone=r2plus1d_18  folds=5
+  fold 0: val_macroF1=0.341  (train 116 / val 32 clips)
+  fold 1: val_macroF1=0.305  (train 122 / val 26 clips)
+  fold 2: val_macroF1=0.334  (train 117 / val 31 clips)
+  fold 3: val_macroF1=0.464  (train 119 / val 29 clips)
+  fold 4: val_macroF1=0.335  (train 118 / val 30 clips)
+
+== vision_r2p1d_cv ==
+OOF  macro-F1 0.436 | macro-AUPRC 0.370 | ECE 0.234
+fold val macro-F1  0.356 +/- 0.056
+TEST single-model  macro-F1 0.349 +/- 0.012
+TEST 5-model ENSEMBLE  macro-F1 0.347 | macro-AUPRC 0.374 | macro-AUROC 0.648 | ECE 0.188
+device=mps  modality=audio  backbone=r2plus1d_18  folds=5
+  fold 0: val_macroF1=0.325  (train 116 / val 32 clips)
+  fold 1: val_macroF1=0.260  (train 122 / val 26 clips)
+  fold 2: val_macroF1=0.234  (train 117 / val 31 clips)
+  fold 3: val_macroF1=0.297  (train 119 / val 29 clips)
+  fold 4: val_macroF1=0.308  (train 118 / val 30 clips)
+
+== audio_cnn_cv ==
+OOF  macro-F1 0.327 | macro-AUPRC 0.227 | ECE 0.313
+fold val macro-F1  0.285 +/- 0.033
+TEST single-model  macro-F1 0.262 +/- 0.011
+TEST 5-model ENSEMBLE  macro-F1 0.277 | macro-AUPRC 0.303 | macro-AUROC 0.547 | ECE 0.267
+device=mps  modality=av  backbone=r2plus1d_18  folds=5
+  fold 0: val_macroF1=0.409  (train 116 / val 32 clips)
+  fold 1: val_macroF1=0.251  (train 122 / val 26 clips)
+  fold 2: val_macroF1=0.297  (train 117 / val 31 clips)
+  fold 3: val_macroF1=0.427  (train 119 / val 29 clips)
+  fold 4: val_macroF1=0.342  (train 118 / val 30 clips)
+
+== av_r2p1d_cv ==
+OOF  macro-F1 0.408 | macro-AUPRC 0.352 | ECE 0.247
+fold val macro-F1  0.345 +/- 0.066
+TEST single-model  macro-F1 0.328 +/- 0.029
+TEST 5-model ENSEMBLE  macro-F1 0.327 | macro-AUPRC 0.490 | macro-AUROC 0.652 | ECE 0.206
+# AutiLens AI - cross-validated results
+
+Subject-disjoint k-fold on pooled train+val; official test split held out. Ensemble = mean of the k fold models. TTA (h-flip) on. Thresholds tuned on out-of-fold predictions.
+
+| config | modality | backbone | folds | OOF macro-F1 | test single macro-F1 | test **ensemble** macro-F1 | ens. macro-AUPRC | ens. macro-AUROC | ens. ECE |
+|---|---|---|---|---|---|---|---|---|---|
+| av_r2p1d_cv | av | r2plus1d_18 | 5 | 0.408 | 0.328 ± 0.029 | 0.327 | 0.490 | 0.652 | 0.206 |
+| vision_r2p1d_cv | vision | r2plus1d_18 | 5 | 0.436 | 0.349 ± 0.012 | 0.347 | 0.374 | 0.648 | 0.188 |
+| audio_cnn_cv | audio | r2plus1d_18 | 5 | 0.327 | 0.262 ± 0.011 | 0.277 | 0.303 | 0.547 | 0.267 |
+
+_train+val pool = 148 usable clips. Absolute scores stay modest; the cross-validated ensemble numbers are the ones to trust for the vision-only vs. audio vs. vision+audio comparison (PDF §10)._
+Done. See reports/cv_summary.md

@@ -1,0 +1,208 @@
+{
+  "tag": "vision_r2p1d_cv",
+  "n_test": 47,
+  "n_exact_correct": 0,
+  "mean_clip_f1": 0.39525498142519416,
+  "correct_examples": [
+    {
+      "video_id": "2TpC6CB0iXw_549_668",
+      "exact": false,
+      "clip_f1": 0.8888888888888888,
+      "true": [
+        "Absence or Avoidance of Eye Contact",
+        "Aggressive Behavior",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Responsiveness to Verbal Interaction",
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "predicted": [
+        "Aggressive Behavior",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Responsiveness to Verbal Interaction",
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        "Absence or Avoidance of Eye Contact"
+      ],
+      "max_true_prob": 0.7116448283195496,
+      "n_errors": 1,
+      "thumbnail": "examples/2TpC6CB0iXw_549_668.jpg"
+    },
+    {
+      "video_id": "7lgAK1z-Scs_0_26",
+      "exact": false,
+      "clip_f1": 0.6666666666666666,
+      "true": [
+        "Upper Limb Stereotypies"
+      ],
+      "predicted": [
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Upper Limb Stereotypies"
+      ],
+      "false_positives": [
+        "Hyper- or Hyporeactivity to Sensory Input"
+      ],
+      "false_negatives": [],
+      "max_true_prob": 0.7204869985580444,
+      "n_errors": 1,
+      "thumbnail": "examples/7lgAK1z-Scs_0_26.jpg"
+    },
+    {
+      "video_id": "3BQvkkTN3Sk_184_206",
+      "exact": false,
+      "clip_f1": 0.6666666666666666,
+      "true": [
+        "Upper Limb Stereotypies"
+      ],
+      "predicted": [
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Upper Limb Stereotypies"
+      ],
+      "false_positives": [
+        "Hyper- or Hyporeactivity to Sensory Input"
+      ],
+      "false_negatives": [],
+      "max_true_prob": 0.713513195514679,
+      "n_errors": 1,
+      "thumbnail": "examples/3BQvkkTN3Sk_184_206.jpg"
+    },
+    {
+      "video_id": "3BQvkkTN3Sk_76_113",
+      "exact": false,
+      "clip_f1": 0.6666666666666666,
+      "true": [
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Typical Language",
+        "Self-Spinning or Spinning Objects"
+      ],
+      "predicted": [
+        "Absence or Avoidance of Eye Contact",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Responsiveness to Verbal Interaction",
+        "Non-Typical Language",
+        "Object Lining-Up",
+        "Self-Spinning or Spinning Objects"
+      ],
+      "false_positives": [
+        "Absence or Avoidance of Eye Contact",
+        "Non-Responsiveness to Verbal Interaction",
+        "Object Lining-Up"
+      ],
+      "false_negatives": [],
+      "max_true_prob": 0.6699256896972656,
+      "n_errors": 3,
+      "thumbnail": "examples/3BQvkkTN3Sk_76_113.jpg"
+    }
+  ],
+  "failed_examples": [
+    {
+      "video_id": "BUAFdqrw4fA_20_44",
+      "exact": false,
+      "clip_f1": 0.0,
+      "true": [
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "predicted": [
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Responsiveness to Verbal Interaction",
+        "Non-Typical Language",
+        "Object Lining-Up",
+        "Self-Spinning or Spinning Objects"
+      ],
+      "false_positives": [
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Responsiveness to Verbal Interaction",
+        "Non-Typical Language",
+        "Object Lining-Up",
+        "Self-Spinning or Spinning Objects"
+      ],
+      "false_negatives": [
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "max_true_prob": 0.39892831444740295,
+      "n_errors": 6,
+      "thumbnail": "examples/BUAFdqrw4fA_20_44.jpg"
+    },
+    {
+      "video_id": "5GJfaMIIUk8_240_264",
+      "exact": false,
+      "clip_f1": 0.0,
+      "true": [
+        "Background"
+      ],
+      "predicted": [
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Responsiveness to Verbal Interaction",
+        "Object Lining-Up",
+        "Self-Spinning or Spinning Objects",
+        "Upper Limb Stereotypies"
+      ],
+      "false_positives": [
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Responsiveness to Verbal Interaction",
+        "Object Lining-Up",
+        "Self-Spinning or Spinning Objects",
+        "Upper Limb Stereotypies"
+      ],
+      "false_negatives": [
+        "Background"
+      ],
+      "max_true_prob": 0.4562007784843445,
+      "n_errors": 6,
+      "thumbnail": "examples/5GJfaMIIUk8_240_264.jpg"
+    },
+    {
+      "video_id": "02mvgUiO-eU_16_22",
+      "exact": false,
+      "clip_f1": 0.0,
+      "true": [
+        "Upper Limb Stereotypies"
+      ],
+      "predicted": [
+        "Aggressive Behavior",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Responsiveness to Verbal Interaction",
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "false_positives": [
+        "Aggressive Behavior",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Responsiveness to Verbal Interaction",
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "false_negatives": [
+        "Upper Limb Stereotypies"
+      ],
+      "max_true_prob": 0.34086623787879944,
+      "n_errors": 5,
+      "thumbnail": "examples/02mvgUiO-eU_16_22.jpg"
+    },
+    {
+      "video_id": "4p9XrwKJkxc_0_15",
+      "exact": false,
+      "clip_f1": 0.0,
+      "true": [
+        "Absence or Avoidance of Eye Contact",
+        "Upper Limb Stereotypies"
+      ],
+      "predicted": [
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Object Lining-Up",
+        "Background"
+      ],
+      "false_positives": [
+        "Background",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Object Lining-Up"
+      ],
+      "false_negatives": [
+        "Absence or Avoidance of Eye Contact",
+        "Upper Limb Stereotypies"
+      ],
+      "max_true_prob": 0.3434677720069885,
+      "n_errors": 5,
+      "thumbnail": "examples/4p9XrwKJkxc_0_15.jpg"
+    }
+  ]
+}

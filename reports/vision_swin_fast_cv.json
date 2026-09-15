@@ -1,0 +1,224 @@
+{
+  "tag": "vision_swin_fast",
+  "modality": "vision",
+  "backbone": "swin3d_t",
+  "audio_encoder": "resnet18_mel",
+  "folds": 5,
+  "seconds": 11.1,
+  "min_precision": 0.4,
+  "calibrated": true,
+  "oof_macro_f1": 0.46205119006658724,
+  "oof_macro_auprc": 0.4436154157216283,
+  "oof_metrics": {
+    "macro_f1": 0.46205119006658724,
+    "micro_f1": 0.47058823529411764,
+    "macro_precision": 0.45745013848627536,
+    "macro_recall": 0.5316935547679962,
+    "macro_auroc": 0.7594809062067417,
+    "macro_auprc": 0.4436154157216283,
+    "ece": 0.001601634468408759,
+    "per_class": {
+      "Absence or Avoidance of Eye Contact": {
+        "support": 65,
+        "f1": 0.29473684210526313,
+        "precision": 0.4666666666666667,
+        "recall": 0.2153846153846154,
+        "auroc": 0.6931054131054131,
+        "auprc": 0.34503105518647753,
+        "threshold": 0.3
+      },
+      "Aggressive Behavior": {
+        "support": 67,
+        "f1": 0.49710982658959535,
+        "precision": 0.4056603773584906,
+        "recall": 0.6417910447761194,
+        "auroc": 0.7816328803742482,
+        "auprc": 0.4207448012154091,
+        "threshold": 0.27499999999999997
+      },
+      "Hyper- or Hyporeactivity to Sensory Input": {
+        "support": 76,
+        "f1": 0.425531914893617,
+        "precision": 0.46153846153846156,
+        "recall": 0.39473684210526316,
+        "auroc": 0.7039219670798618,
+        "auprc": 0.4710099908452164,
+        "threshold": 0.25
+      },
+      "Non-Responsiveness to Verbal Interaction": {
+        "support": 49,
+        "f1": 0.2553191489361702,
+        "precision": 0.26666666666666666,
+        "recall": 0.24489795918367346,
+        "auroc": 0.6584486941629799,
+        "auprc": 0.21818181509839563,
+        "threshold": 0.25
+      },
+      "Non-Typical Language": {
+        "support": 49,
+        "f1": 0.2471042471042471,
+        "precision": 0.1523809523809524,
+        "recall": 0.6530612244897959,
+        "auroc": 0.516590552304838,
+        "auprc": 0.1507038401331448,
+        "threshold": 0.15
+      },
+      "Object Lining-Up": {
+        "support": 16,
+        "f1": 0.5294117647058824,
+        "precision": 0.5,
+        "recall": 0.5625,
+        "auroc": 0.8820532915360502,
+        "auprc": 0.39923941122555257,
+        "threshold": 0.175
+      },
+      "Self-Hitting or Self-Injurious Behavior": {
+        "support": 46,
+        "f1": 0.5945945945945946,
+        "precision": 0.5076923076923077,
+        "recall": 0.717391304347826,
+        "auroc": 0.8929216187753873,
+        "auprc": 0.5919461530889902,
+        "threshold": 0.175
+      },
+      "Self-Spinning or Spinning Objects": {
+        "support": 48,
+        "f1": 0.6172839506172839,
+        "precision": 0.7575757575757576,
+        "recall": 0.5208333333333334,
+        "auroc": 0.8825130662020906,
+        "auprc": 0.6604550487573557,
+        "threshold": 0.3
+      },
+      "Upper Limb Stereotypies": {
+        "support": 127,
+        "f1": 0.6973684210526315,
+        "precision": 0.5988700564971752,
+        "recall": 0.8346456692913385,
+        "auroc": 0.8241406723198061,
+        "auprc": 0.7352266259441127,
+        "threshold": 0.27499999999999997
+      }
+    },
+    "n_samples": 335
+  },
+  "fold_val_macro_f1": {
+    "mean": 0.28685178322613825,
+    "std": 0.03780970338992161,
+    "per_fold": [
+      0.24943196651880126,
+      0.2999210303131872,
+      0.24416740045239488,
+      0.292910003275857,
+      0.347828515570451
+    ]
+  },
+  "test_single_model_macro_f1": {
+    "mean": 0.4556399433930616,
+    "std": 0.019642634702652942
+  },
+  "test_ensemble_metrics": {
+    "macro_f1": 0.49386766058148157,
+    "micro_f1": 0.49746192893401014,
+    "macro_precision": 0.5706059807782533,
+    "macro_recall": 0.5560542398777693,
+    "macro_auroc": 0.7438749045630428,
+    "macro_auprc": 0.5090619907960767,
+    "ece": 0.03737008386793718,
+    "per_class": {
+      "Absence or Avoidance of Eye Contact": {
+        "support": 28,
+        "f1": 0.5,
+        "precision": 0.8333333333333334,
+        "recall": 0.35714285714285715,
+        "auroc": 0.6908482142857143,
+        "auprc": 0.5762463672426109,
+        "threshold": 0.3
+      },
+      "Aggressive Behavior": {
+        "support": 16,
+        "f1": 0.6363636363636364,
+        "precision": 0.5,
+        "recall": 0.875,
+        "auroc": 0.9103618421052632,
+        "auprc": 0.5942982456140351,
+        "threshold": 0.27499999999999997
+      },
+      "Hyper- or Hyporeactivity to Sensory Input": {
+        "support": 12,
+        "f1": 0.4,
+        "precision": 0.30434782608695654,
+        "recall": 0.5833333333333334,
+        "auroc": 0.6947916666666666,
+        "auprc": 0.23424246001477123,
+        "threshold": 0.25
+      },
+      "Non-Responsiveness to Verbal Interaction": {
+        "support": 17,
+        "f1": 0.35714285714285715,
+        "precision": 0.45454545454545453,
+        "recall": 0.29411764705882354,
+        "auroc": 0.7007843137254901,
+        "auprc": 0.3482627701937165,
+        "threshold": 0.25
+      },
+      "Non-Typical Language": {
+        "support": 21,
+        "f1": 0.2988505747126437,
+        "precision": 0.19696969696969696,
+        "recall": 0.6190476190476191,
+        "auroc": 0.44232059020791414,
+        "auprc": 0.20797082721157995,
+        "threshold": 0.15
+      },
+      "Object Lining-Up": {
+        "support": 8,
+        "f1": 0.4,
+        "precision": 1.0,
+        "recall": 0.25,
+        "auroc": 0.8824404761904763,
+        "auprc": 0.7209821428571428,
+        "threshold": 0.175
+      },
+      "Self-Hitting or Self-Injurious Behavior": {
+        "support": 17,
+        "f1": 0.5116279069767442,
+        "precision": 0.4230769230769231,
+        "recall": 0.6470588235294118,
+        "auroc": 0.7925490196078431,
+        "auprc": 0.6081487655791061,
+        "threshold": 0.175
+      },
+      "Self-Spinning or Spinning Objects": {
+        "support": 11,
+        "f1": 0.6666666666666666,
+        "precision": 0.8571428571428571,
+        "recall": 0.5454545454545454,
+        "auroc": 0.8198653198653199,
+        "auprc": 0.6277519272171679,
+        "threshold": 0.3
+      },
+      "Upper Limb Stereotypies": {
+        "support": 36,
+        "f1": 0.6741573033707865,
+        "precision": 0.5660377358490566,
+        "recall": 0.8333333333333334,
+        "auroc": 0.7609126984126985,
+        "auprc": 0.6636544112345604,
+        "threshold": 0.27499999999999997
+      }
+    },
+    "n_samples": 92
+  },
+  "thresholds": [
+    0.3,
+    0.27499999999999997,
+    0.25,
+    0.25,
+    0.15,
+    0.175,
+    0.175,
+    0.3,
+    0.27499999999999997
+  ]
+}

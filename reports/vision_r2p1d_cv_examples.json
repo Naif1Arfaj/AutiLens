@@ -1,0 +1,215 @@
+{
+  "tag": "vision_r2p1d_cv",
+  "n_test": 92,
+  "n_exact_correct": 0,
+  "mean_clip_f1": 0.41105072463768105,
+  "correct_examples": [
+    {
+      "video_id": "R_gZqQy_Ae4_0_56",
+      "exact": false,
+      "clip_f1": 0.8,
+      "true": [
+        "Non-Typical Language",
+        "Upper Limb Stereotypies"
+      ],
+      "predicted": [
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Typical Language",
+        "Upper Limb Stereotypies"
+      ],
+      "false_positives": [
+        "Hyper- or Hyporeactivity to Sensory Input"
+      ],
+      "false_negatives": [],
+      "max_true_prob": 0.7334954738616943,
+      "n_errors": 1,
+      "thumbnail": "examples/R_gZqQy_Ae4_0_56.jpg"
+    },
+    {
+      "video_id": "FrsDDZycjfY_129_141",
+      "exact": false,
+      "clip_f1": 0.8,
+      "true": [
+        "Absence or Avoidance of Eye Contact",
+        "Non-Typical Language",
+        "Upper Limb Stereotypies"
+      ],
+      "predicted": [
+        "Non-Typical Language",
+        "Upper Limb Stereotypies"
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        "Absence or Avoidance of Eye Contact"
+      ],
+      "max_true_prob": 0.7173287272453308,
+      "n_errors": 1,
+      "thumbnail": "examples/FrsDDZycjfY_129_141.jpg"
+    },
+    {
+      "video_id": "2TpC6CB0iXw_549_668",
+      "exact": false,
+      "clip_f1": 0.8,
+      "true": [
+        "Absence or Avoidance of Eye Contact",
+        "Aggressive Behavior",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Responsiveness to Verbal Interaction",
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "predicted": [
+        "Absence or Avoidance of Eye Contact",
+        "Aggressive Behavior",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Responsiveness to Verbal Interaction",
+        "Non-Typical Language"
+      ],
+      "false_positives": [
+        "Non-Typical Language"
+      ],
+      "false_negatives": [
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "max_true_prob": 0.6813228726387024,
+      "n_errors": 2,
+      "thumbnail": "examples/2TpC6CB0iXw_549_668.jpg"
+    },
+    {
+      "video_id": "E-XgK_LaFKI_28_38",
+      "exact": false,
+      "clip_f1": 0.8,
+      "true": [
+        "Non-Typical Language",
+        "Upper Limb Stereotypies"
+      ],
+      "predicted": [
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Typical Language",
+        "Upper Limb Stereotypies"
+      ],
+      "false_positives": [
+        "Hyper- or Hyporeactivity to Sensory Input"
+      ],
+      "false_negatives": [],
+      "max_true_prob": 0.6562269926071167,
+      "n_errors": 1,
+      "thumbnail": "examples/E-XgK_LaFKI_28_38.jpg"
+    }
+  ],
+  "failed_examples": [
+    {
+      "video_id": "JCHtVLqJWpg_73_80",
+      "exact": false,
+      "clip_f1": 0.0,
+      "true": [
+        "Aggressive Behavior",
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "predicted": [
+        "Absence or Avoidance of Eye Contact",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Responsiveness to Verbal Interaction",
+        "Non-Typical Language",
+        "Upper Limb Stereotypies"
+      ],
+      "false_positives": [
+        "Absence or Avoidance of Eye Contact",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Responsiveness to Verbal Interaction",
+        "Non-Typical Language",
+        "Upper Limb Stereotypies"
+      ],
+      "false_negatives": [
+        "Aggressive Behavior",
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "max_true_prob": 0.42820534110069275,
+      "n_errors": 7,
+      "thumbnail": "examples/JCHtVLqJWpg_73_80.jpg"
+    },
+    {
+      "video_id": "-9aliPAniig_66_71",
+      "exact": false,
+      "clip_f1": 0.0,
+      "true": [
+        "Non-Responsiveness to Verbal Interaction",
+        "Self-Spinning or Spinning Objects"
+      ],
+      "predicted": [
+        "Absence or Avoidance of Eye Contact",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Typical Language",
+        "Upper Limb Stereotypies"
+      ],
+      "false_positives": [
+        "Absence or Avoidance of Eye Contact",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Typical Language",
+        "Upper Limb Stereotypies"
+      ],
+      "false_negatives": [
+        "Non-Responsiveness to Verbal Interaction",
+        "Self-Spinning or Spinning Objects"
+      ],
+      "max_true_prob": 0.26956117153167725,
+      "n_errors": 6,
+      "thumbnail": "examples/-9aliPAniig_66_71.jpg"
+    },
+    {
+      "video_id": "02mvgUiO-eU_16_22",
+      "exact": false,
+      "clip_f1": 0.0,
+      "true": [
+        "Upper Limb Stereotypies"
+      ],
+      "predicted": [
+        "Absence or Avoidance of Eye Contact",
+        "Aggressive Behavior",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Typical Language",
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "false_positives": [
+        "Absence or Avoidance of Eye Contact",
+        "Aggressive Behavior",
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Typical Language",
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "false_negatives": [
+        "Upper Limb Stereotypies"
+      ],
+      "max_true_prob": 0.38022488355636597,
+      "n_errors": 6,
+      "thumbnail": "examples/02mvgUiO-eU_16_22.jpg"
+    },
+    {
+      "video_id": "JCHtVLqJWpg_54_62",
+      "exact": false,
+      "clip_f1": 0.0,
+      "true": [
+        "Aggressive Behavior",
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "predicted": [
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Typical Language",
+        "Self-Spinning or Spinning Objects",
+        "Upper Limb Stereotypies"
+      ],
+      "false_positives": [
+        "Hyper- or Hyporeactivity to Sensory Input",
+        "Non-Typical Language",
+        "Self-Spinning or Spinning Objects",
+        "Upper Limb Stereotypies"
+      ],
+      "false_negatives": [
+        "Aggressive Behavior",
+        "Self-Hitting or Self-Injurious Behavior"
+      ],
+      "max_true_prob": 0.4404033124446869,
+      "n_errors": 6,
+      "thumbnail": "examples/JCHtVLqJWpg_54_62.jpg"
+    }
+  ]
+}

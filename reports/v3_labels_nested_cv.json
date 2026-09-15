@@ -1,0 +1,139 @@
+{
+  "tag": "v3_labels_nested",
+  "target": "labels",
+  "scope": "9-class (labels)",
+  "modality": "av",
+  "backbone": "swin3d_t",
+  "audio_encoder": "resnet18_mel",
+  "folds": 5,
+  "inner_folds": 5,
+  "nested_cv": true,
+  "seconds": 22.4,
+  "min_precision": 0.4,
+  "calibrated": true,
+  "oof_macro_f1": 0.41311428406896794,
+  "oof_macro_auprc": 0.43052463488277737,
+  "oof_metrics": {
+    "macro_f1": 0.41311428406896794,
+    "micro_f1": 0.4158878504672897,
+    "macro_precision": 0.3953521768387468,
+    "macro_recall": 0.46564960118962717,
+    "macro_auroc": 0.7228287282403789,
+    "macro_auprc": 0.43052463488277737,
+    "ece": 0.03606839724793215,
+    "per_class": {
+      "Absence or Avoidance of Eye Contact": {
+        "support": 65,
+        "f1": 0.3431952662721893,
+        "precision": 0.27884615384615385,
+        "recall": 0.4461538461538462,
+        "auroc": 0.6355555555555555,
+        "auprc": 0.32888487560244883,
+        "threshold": 0.2672387957572937,
+        "threshold_std": 0.11092986911535263
+      },
+      "Aggressive Behavior": {
+        "support": 67,
+        "f1": 0.40268456375838924,
+        "precision": 0.36585365853658536,
+        "recall": 0.44776119402985076,
+        "auroc": 0.7378035197148586,
+        "auprc": 0.3985876654038288,
+        "threshold": 0.2673880457878113,
+        "threshold_std": 0.09252817183732986
+      },
+      "Hyper- or Hyporeactivity to Sensory Input": {
+        "support": 76,
+        "f1": 0.37735849056603776,
+        "precision": 0.29411764705882354,
+        "recall": 0.5263157894736842,
+        "auroc": 0.6342206868522657,
+        "auprc": 0.3510443880576476,
+        "threshold": 0.32567164301872253,
+        "threshold_std": 0.027275478467345238
+      },
+      "Non-Responsiveness to Verbal Interaction": {
+        "support": 49,
+        "f1": 0.24324324324324326,
+        "precision": 0.18181818181818182,
+        "recall": 0.3673469387755102,
+        "auroc": 0.6207364064506922,
+        "auprc": 0.21742051740330987,
+        "threshold": 0.2766417860984802,
+        "threshold_std": 0.11232411861419678
+      },
+      "Non-Typical Language": {
+        "support": 49,
+        "f1": 0.15126050420168066,
+        "precision": 0.12857142857142856,
+        "recall": 0.1836734693877551,
+        "auroc": 0.48130440987583845,
+        "auprc": 0.1413814705543095,
+        "threshold": 0.18701492249965668,
+        "threshold_std": 0.09468746185302734
+      },
+      "Object Lining-Up": {
+        "support": 16,
+        "f1": 0.5,
+        "precision": 0.5833333333333334,
+        "recall": 0.4375,
+        "auroc": 0.8863636363636364,
+        "auprc": 0.43209219541965316,
+        "threshold": 0.3014925420284271,
+        "threshold_std": 0.17956626415252686
+      },
+      "Self-Hitting or Self-Injurious Behavior": {
+        "support": 46,
+        "f1": 0.48,
+        "precision": 0.379746835443038,
+        "recall": 0.6521739130434783,
+        "auroc": 0.8169851060628857,
+        "auprc": 0.6098857851803076,
+        "threshold": 0.24223880469799042,
+        "threshold_std": 0.07589900493621826
+      },
+      "Self-Spinning or Spinning Objects": {
+        "support": 48,
+        "f1": 0.5853658536585366,
+        "precision": 0.7058823529411765,
+        "recall": 0.5,
+        "auroc": 0.8857433217189316,
+        "auprc": 0.6677266313995454,
+        "threshold": 0.33582091331481934,
+        "threshold_std": 0.11502950638532639
+      },
+      "Upper Limb Stereotypies": {
+        "support": 127,
+        "f1": 0.6349206349206349,
+        "precision": 0.64,
+        "recall": 0.6299212598425197,
+        "auroc": 0.8067459115687461,
+        "auprc": 0.7276981849239461,
+        "threshold": 0.41671642661094666,
+        "threshold_std": 0.11767508089542389
+      }
+    },
+    "n_samples": 335
+  },
+  "inner_val_macro_f1": {
+    "mean": 0.30703669949283985,
+    "std": 0.07365298477599615,
+    "per_fold": [
+      0.42706799373466037,
+      0.21031746031746032,
+      0.3068265068265068,
+      0.33482274710344884,
+      0.25614878948212283
+    ]
+  },
+  "best_epochs": [
+    45,
+    41,
+    40,
+    81,
+    67
+  ],
+  "derived_baseline_oof_metrics": null,
+  "test_evaluated": false,
+  "test_note": "held-out test set deliberately NOT evaluated; it is reporting-only and is touched once, after the candidate is locked on outer-OOF performance (Phase 4)"
+}

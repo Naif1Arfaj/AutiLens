@@ -1,0 +1,228 @@
+{
+  "tag": "vision_lstm",
+  "checkpoint": "/Users/naifalarfaj/Desktop/avasd_download/AutiLens/models/vision_lstm.pt",
+  "best_epoch": 7,
+  "val_metrics_tuned": {
+    "macro_f1": 0.48193373901284653,
+    "micro_f1": 0.44047619047619047,
+    "macro_precision": 0.410508177008177,
+    "macro_recall": 0.8283333333333334,
+    "macro_auroc": 0.6332153461138967,
+    "macro_auprc": 0.3720478262935637,
+    "ece": 0.2578502996652215,
+    "per_class": {
+      "Absence or Avoidance of Eye Contact": {
+        "support": 5,
+        "f1": 0.6666666666666666,
+        "precision": 0.75,
+        "recall": 0.6,
+        "auroc": 0.8090909090909091,
+        "auprc": 0.6740384615384616,
+        "threshold": 0.49999999999999994
+      },
+      "Aggressive Behavior": {
+        "support": 2,
+        "f1": 0.4,
+        "precision": 0.25,
+        "recall": 1.0,
+        "auroc": 0.8,
+        "auprc": 0.225,
+        "threshold": 0.39999999999999997
+      },
+      "Hyper- or Hyporeactivity to Sensory Input": {
+        "support": 7,
+        "f1": 0.4117647058823529,
+        "precision": 0.25925925925925924,
+        "recall": 1.0,
+        "auroc": 0.2571428571428571,
+        "auprc": 0.2004698200350374,
+        "threshold": 0.05
+      },
+      "Non-Responsiveness to Verbal Interaction": {
+        "support": 3,
+        "f1": 0.6666666666666666,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "auroc": 0.7361111111111112,
+        "auprc": 0.6031746031746031,
+        "threshold": 0.49999999999999994
+      },
+      "Non-Typical Language": {
+        "support": 5,
+        "f1": 0.3448275862068966,
+        "precision": 0.20833333333333334,
+        "recall": 1.0,
+        "auroc": 0.4454545454545455,
+        "auprc": 0.18673964923964925,
+        "threshold": 0.44999999999999996
+      },
+      "Object Lining-Up": {
+        "support": 1,
+        "f1": 0.13333333333333333,
+        "precision": 0.07142857142857142,
+        "recall": 1.0,
+        "auroc": 0.5384615384615384,
+        "auprc": 0.07692307692307693,
+        "threshold": 0.35
+      },
+      "Self-Hitting or Self-Injurious Behavior": {
+        "support": 5,
+        "f1": 0.6,
+        "precision": 0.6,
+        "recall": 0.6,
+        "auroc": 0.7181818181818181,
+        "auprc": 0.4473504273504273,
+        "threshold": 0.35
+      },
+      "Self-Spinning or Spinning Objects": {
+        "support": 3,
+        "f1": 0.6666666666666666,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "auroc": 0.8194444444444444,
+        "auprc": 0.6222222222222222,
+        "threshold": 0.39999999999999997
+      },
+      "Upper Limb Stereotypies": {
+        "support": 9,
+        "f1": 0.5294117647058824,
+        "precision": 0.36,
+        "recall": 1.0,
+        "auroc": 0.4691358024691358,
+        "auprc": 0.401226669118826,
+        "threshold": 0.44999999999999996
+      },
+      "Background": {
+        "support": 4,
+        "f1": 0.4,
+        "precision": 0.2727272727272727,
+        "recall": 0.75,
+        "auroc": 0.7391304347826086,
+        "auprc": 0.2833333333333333,
+        "threshold": 0.5499999999999999
+      }
+    },
+    "n_samples": 27
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.1309845220944112,
+      "val_macro_f1": 0.23569984127705265,
+      "val_macro_auprc": 0.30673404309446617,
+      "sec": 3.2
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.088570659318246,
+      "val_macro_f1": 0.09045977011494252,
+      "val_macro_auprc": 0.34688171130878764,
+      "sec": 1.0
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.094593852019507,
+      "val_macro_f1": 0.22361045437342772,
+      "val_macro_auprc": 0.36965140776768235,
+      "sec": 1.0
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.0799515040452816,
+      "val_macro_f1": 0.22916208791208792,
+      "val_macro_auprc": 0.3354852966945154,
+      "sec": 1.0
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.0389265186530499,
+      "val_macro_f1": 0.21075043377674954,
+      "val_macro_auprc": 0.4125840450969303,
+      "sec": 1.0
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.0163631173204783,
+      "val_macro_f1": 0.2587388456953674,
+      "val_macro_auprc": 0.4285214147380432,
+      "sec": 1.1
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.9737026041204279,
+      "val_macro_f1": 0.36043956043956044,
+      "val_macro_auprc": 0.3720478262935637,
+      "sec": 1.0
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.9465218984391078,
+      "val_macro_f1": 0.28170467213945477,
+      "val_macro_auprc": 0.4099098050013382,
+      "sec": 1.0
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.8178492311603767,
+      "val_macro_f1": 0.29449502252133836,
+      "val_macro_auprc": 0.42086021655625816,
+      "sec": 1.0
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.8608332271418295,
+      "val_macro_f1": 0.22834586466165413,
+      "val_macro_auprc": 0.4791299697894125,
+      "sec": 1.0
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.8069505868864454,
+      "val_macro_f1": 0.22976190476190475,
+      "val_macro_auprc": 0.401548104156053,
+      "sec": 1.0
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.7487721901294614,
+      "val_macro_f1": 0.3296637426900585,
+      "val_macro_auprc": 0.3748985038487102,
+      "sec": 1.1
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.6955379218109383,
+      "val_macro_f1": 0.32395604395604394,
+      "val_macro_auprc": 0.40074877271132936,
+      "sec": 1.0
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.6572293387956856,
+      "val_macro_f1": 0.3102870813397129,
+      "val_macro_auprc": 0.4348507914252632,
+      "sec": 1.0
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.5943034049893213,
+      "val_macro_f1": 0.33729251035702645,
+      "val_macro_auprc": 0.43360582023255567,
+      "sec": 1.0
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.5548113466294344,
+      "val_macro_f1": 0.24330572808833675,
+      "val_macro_auprc": 0.4297424735102009,
+      "sec": 1.0
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.6002819203148203,
+      "val_macro_f1": 0.25922917662048095,
+      "val_macro_auprc": 0.43906975600315884,
+      "sec": 1.1
+    }
+  ]
+}

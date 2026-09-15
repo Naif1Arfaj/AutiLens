@@ -1,0 +1,326 @@
+{
+  "tag": "vision_transformer",
+  "checkpoint": "/Users/naifalarfaj/Desktop/avasd_download/AutiLens/models/vision_transformer.pt",
+  "best_epoch": 21,
+  "val_metrics_tuned": {
+    "macro_f1": 0.49873599439775906,
+    "micro_f1": 0.4508670520231214,
+    "macro_precision": 0.4106007442849548,
+    "macro_recall": 0.7933333333333333,
+    "macro_auroc": 0.6618033809990331,
+    "macro_auprc": 0.4458242579500209,
+    "ece": 0.18315618590244817,
+    "per_class": {
+      "Absence or Avoidance of Eye Contact": {
+        "support": 5,
+        "f1": 0.625,
+        "precision": 0.45454545454545453,
+        "recall": 1.0,
+        "auroc": 0.8545454545454545,
+        "auprc": 0.5972222222222223,
+        "threshold": 0.39999999999999997
+      },
+      "Aggressive Behavior": {
+        "support": 2,
+        "f1": 0.5714285714285714,
+        "precision": 0.4,
+        "recall": 1.0,
+        "auroc": 0.92,
+        "auprc": 0.45,
+        "threshold": 0.35
+      },
+      "Hyper- or Hyporeactivity to Sensory Input": {
+        "support": 7,
+        "f1": 0.4117647058823529,
+        "precision": 0.25925925925925924,
+        "recall": 1.0,
+        "auroc": 0.4714285714285714,
+        "auprc": 0.4489156346299203,
+        "threshold": 0.05
+      },
+      "Non-Responsiveness to Verbal Interaction": {
+        "support": 3,
+        "f1": 0.4,
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "auroc": 0.8194444444444444,
+        "auprc": 0.5277777777777778,
+        "threshold": 0.7
+      },
+      "Non-Typical Language": {
+        "support": 5,
+        "f1": 0.3125,
+        "precision": 0.18518518518518517,
+        "recall": 1.0,
+        "auroc": 0.2090909090909091,
+        "auprc": 0.1406951566951567,
+        "threshold": 0.05
+      },
+      "Object Lining-Up": {
+        "support": 1,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "auroc": 0.2692307692307693,
+        "auprc": 0.05,
+        "threshold": 0.05
+      },
+      "Self-Hitting or Self-Injurious Behavior": {
+        "support": 5,
+        "f1": 0.6666666666666666,
+        "precision": 0.75,
+        "recall": 0.6,
+        "auroc": 0.7272727272727273,
+        "auprc": 0.5804093567251463,
+        "threshold": 0.39999999999999997
+      },
+      "Self-Spinning or Spinning Objects": {
+        "support": 3,
+        "f1": 0.8571428571428571,
+        "precision": 0.75,
+        "recall": 1.0,
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "threshold": 0.44999999999999996
+      },
+      "Upper Limb Stereotypies": {
+        "support": 9,
+        "f1": 0.6428571428571429,
+        "precision": 0.47368421052631576,
+        "recall": 1.0,
+        "auroc": 0.6296296296296297,
+        "auprc": 0.3992072799348341,
+        "threshold": 0.35
+      },
+      "Background": {
+        "support": 4,
+        "f1": 0.5,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "auroc": 0.717391304347826,
+        "auprc": 0.26401515151515154,
+        "threshold": 0.75
+      }
+    },
+    "n_samples": 27
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.1343211285338914,
+      "val_macro_f1": 0.19593748684265927,
+      "val_macro_auprc": 0.2539314166850152,
+      "sec": 1.7
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.108304925201353,
+      "val_macro_f1": 0.13680555555555557,
+      "val_macro_auprc": 0.27606109469724066,
+      "sec": 1.0
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.1187215619835973,
+      "val_macro_f1": 0.05714285714285714,
+      "val_macro_auprc": 0.27803107339520383,
+      "sec": 1.0
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.1184564750056623,
+      "val_macro_f1": 0.08636363636363636,
+      "val_macro_auprc": 0.29782780168247835,
+      "sec": 1.0
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.1058537506860149,
+      "val_macro_f1": 0.08694786535303775,
+      "val_macro_auprc": 0.31796103173626467,
+      "sec": 1.2
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.097665298083597,
+      "val_macro_f1": 0.09619047619047619,
+      "val_macro_auprc": 0.3058262520510496,
+      "sec": 1.1
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.0807327830101834,
+      "val_macro_f1": 0.2353846153846154,
+      "val_macro_auprc": 0.28435799200680917,
+      "sec": 1.0
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.0668288868320874,
+      "val_macro_f1": 0.24449329424861235,
+      "val_macro_auprc": 0.3427102228257543,
+      "sec": 1.1
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.002143807647642,
+      "val_macro_f1": 0.306976580834007,
+      "val_macro_auprc": 0.324141267726982,
+      "sec": 1.0
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.9443651900803747,
+      "val_macro_f1": 0.1674404761904762,
+      "val_macro_auprc": 0.2865737251129408,
+      "sec": 1.0
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.9419164135436381,
+      "val_macro_f1": 0.25024083759377874,
+      "val_macro_auprc": 0.3626165656038721,
+      "sec": 1.0
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.9194181472801966,
+      "val_macro_f1": 0.21583333333333332,
+      "val_macro_auprc": 0.3828876435774964,
+      "sec": 1.0
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.9523948756131259,
+      "val_macro_f1": 0.31446608946608945,
+      "val_macro_auprc": 0.3928032393818771,
+      "sec": 1.0
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.870763007274344,
+      "val_macro_f1": 0.24617954911433176,
+      "val_macro_auprc": 0.3740081335359974,
+      "sec": 1.0
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.737441724489543,
+      "val_macro_f1": 0.3816883116883117,
+      "val_macro_auprc": 0.4071314747535908,
+      "sec": 1.0
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.7967894614235429,
+      "val_macro_f1": 0.2922556390977444,
+      "val_macro_auprc": 0.3991569188282737,
+      "sec": 1.1
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.7171088274845407,
+      "val_macro_f1": 0.34232478632478636,
+      "val_macro_auprc": 0.3953116679292118,
+      "sec": 1.1
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.7217169497623916,
+      "val_macro_f1": 0.35328475871954135,
+      "val_macro_auprc": 0.4058328252956864,
+      "sec": 1.0
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.6382199427313056,
+      "val_macro_f1": 0.35314395749178357,
+      "val_macro_auprc": 0.42320894728511876,
+      "sec": 1.0
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.6189955128125908,
+      "val_macro_f1": 0.26015873015873014,
+      "val_macro_auprc": 0.4224413190786952,
+      "sec": 1.0
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.6733866614743698,
+      "val_macro_f1": 0.3940242763772176,
+      "val_macro_auprc": 0.4458242579500209,
+      "sec": 1.0
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.5764461933088697,
+      "val_macro_f1": 0.37565945165945164,
+      "val_macro_auprc": 0.42304689251760186,
+      "sec": 1.2
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.5541771551794257,
+      "val_macro_f1": 0.3580128803658216,
+      "val_macro_auprc": 0.4045918764656859,
+      "sec": 1.2
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.56699145529881,
+      "val_macro_f1": 0.3838636363636364,
+      "val_macro_auprc": 0.43893859647977296,
+      "sec": 1.2
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.5521923682906411,
+      "val_macro_f1": 0.3285808309337721,
+      "val_macro_auprc": 0.40854246266417676,
+      "sec": 1.2
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.5163621414791454,
+      "val_macro_f1": 0.3630286053815466,
+      "val_macro_auprc": 0.4057422498758633,
+      "sec": 1.2
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.5167552907604817,
+      "val_macro_f1": 0.3448419031948443,
+      "val_macro_auprc": 0.3904069359194073,
+      "sec": 1.3
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.4627659458759402,
+      "val_macro_f1": 0.37545284780578897,
+      "val_macro_auprc": 0.4509692288671827,
+      "sec": 1.3
+    },
+    {
+      "epoch": 29,
+      "train_loss": 0.471078988441751,
+      "val_macro_f1": 0.3747446670976083,
+      "val_macro_auprc": 0.42220752007178364,
+      "sec": 1.1
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.4760198370237981,
+      "val_macro_f1": 0.2805749479278891,
+      "val_macro_auprc": 0.3738467733286574,
+      "sec": 1.4
+    },
+    {
+      "epoch": 31,
+      "train_loss": 0.4848932934201453,
+      "val_macro_f1": 0.29216624895572263,
+      "val_macro_auprc": 0.3672873606736278,
+      "sec": 1.2
+    }
+  ]
+}

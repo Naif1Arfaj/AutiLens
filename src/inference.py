@@ -20,11 +20,31 @@ from src.fusion.model import AutiLensNet
 from src.preprocessing.features import log_mel, sample_frames
 
 
+#: The two head types this project serves. ``multilabel`` is the 9-behavior
+#: sigmoid head trained here; ``multiclass`` is the softmax head used by
+#: externally trained checkpoints, where exactly one class wins per clip.
+MULTILABEL = "multilabel"
+MULTICLASS = "multiclass"
+
+
 @dataclass
 class Prediction:
     behaviors: list[dict] = field(default_factory=list)   # {label, probability, detected, threshold}
     evidence: list[dict] = field(default_factory=list)    # {label, window_s, note}
     modality: str = "av"
+    #: ``multilabel`` (independent per-behavior sigmoids, per-class thresholds)
+    #: or ``multiclass`` (softmax over mutually exclusive classes). Consumers
+    #: branch on this instead of assuming the multi-label shape.
+    task: str = MULTILABEL
+    #: Multi-class only: {label, probability} for the winning class. ``None``
+    #: for multi-label, where any number of behaviors may fire at once.
+    top_class: dict | None = None
+    #: Two-stage only: Stage 1 behavior families, each
+    #: {label, probability, detected, threshold}. Families are MULTI-LABEL (a clip
+    #: can show more than one), so this is deliberately not ``top_class``, which
+    #: carries mutually-exclusive multi-class semantics. ``behaviors`` continues to
+    #: mean the 9-behavior Stage 2 output.
+    families: list[dict] | None = None
     disclaimer: str = (
         "This result is a research screening aid, not a diagnosis of autism. "
         "It reports recognition of dataset-defined behaviors only and must not "
@@ -32,12 +52,20 @@ class Prediction:
     )
 
     def to_dict(self) -> dict:
-        return {
+        # ``behaviors``/``evidence``/``modality``/``disclaimer`` keep their exact
+        # previous meaning and position so existing API clients are unaffected.
+        out = {
             "behaviors": self.behaviors,
             "evidence": self.evidence,
             "modality": self.modality,
+            "task": self.task,
             "disclaimer": self.disclaimer,
         }
+        if self.top_class is not None:
+            out["top_class"] = self.top_class
+        if self.families is not None:
+            out["families"] = self.families
+        return out
 
 
 class AutiLensPredictor:

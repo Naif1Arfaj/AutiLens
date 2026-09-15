@@ -56,7 +56,12 @@ def build(config_path: str | None = None) -> pd.DataFrame:
         .rename(columns={"Video_ID": "video_id"})
         .reset_index(drop=True)
     )
-    full["subject_id"] = full["video_id"].map(subject_of)
+    if "Original_ID" in full.columns:
+        # Full download ships the true source-video id directly -- more
+        # robust than parsing it back out of the clip id string.
+        full["subject_id"] = full["Original_ID"]
+    else:
+        full["subject_id"] = full["video_id"].map(subject_of)
 
     # Verify subject-disjoint splits (PDF section 6, "Critical rule").
     by_split = {s: set(full.loc[full.split == s, "subject_id"]) for s in ("train", "val", "test")}
@@ -71,8 +76,9 @@ def build(config_path: str | None = None) -> pd.DataFrame:
     has_video, has_audio, n_frames, fps_col, dur_col = [], [], [], [], []
     for vid in full["video_id"]:
         vpath = video_dir / f"{vid}.mp4"
-        has_v = vpath.exists()
-        n, fps, dur = _probe(vpath) if has_v else (0, 0.0, 0.0)
+        exists = vpath.exists()
+        n, fps, dur = _probe(vpath) if exists else (0, 0.0, 0.0)
+        has_v = exists and n > 0  # exclude truncated/corrupt files (0 decodable frames)
         has_video.append(int(has_v))
         has_audio.append(int((audio_dir / f"{vid}.wav").exists()))
         n_frames.append(n)

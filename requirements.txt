@@ -15,3 +15,5 @@ uvicorn[standard]>=0.30
 python-multipart>=0.0.9
 streamlit>=1.40
 requests>=2.32
+anthropic>=0.125   # language-model report generation (src/llm_report.py); needs ANTHROPIC_API_KEY
+python-dotenv>=1.0 # optional: loads ANTHROPIC_API_KEY from a git-ignored .env file

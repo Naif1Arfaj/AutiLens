@@ -1,3 +1,4 @@
+.env
 __pycache__/
 *.pyc
 .DS_Store
@@ -5,6 +6,11 @@ __pycache__/
 venv/
 
 # generated artefacts
+# NOTE: `models/*.pt` does NOT match subdirectories -- models/archive_195clip/
+# held 1.4 GB of checkpoints that would otherwise have been committed.
+models/**/*.pt
+# JPEG-packed cache staged for Colab upload (~430 MB)
+data/packed/
 data/processed/
 data/metadata/
 data/splits/

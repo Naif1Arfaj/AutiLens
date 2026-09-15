@@ -104,16 +104,23 @@ def precompute(config_path: str | None = None, overwrite: bool = False) -> None:
     (proc / "mel").mkdir(parents=True, exist_ok=True)
 
     nf, sz = int(cfg["video"]["num_frames"]), int(cfg["video"]["frame_size"])
+    failed = []
     for vid in tqdm(meta.video_id, desc="precompute"):
-        fpath = proc / "frames" / f"{vid}.npy"
-        if overwrite or not fpath.exists():
-            np.save(fpath, sample_frames(video_dir / f"{vid}.mp4", nf, sz))
-        mpath = proc / "mel" / f"{vid}.npy"
-        if overwrite or not mpath.exists():
-            src = audio_dir / f"{vid}.wav"
-            src = src if src.exists() else video_dir / f"{vid}.mp4"
-            np.save(mpath, log_mel(src, cfg["audio"]))
-    print(f"Cached frames + mel for {len(meta)} clips under {proc}")
+        try:
+            fpath = proc / "frames" / f"{vid}.npy"
+            if overwrite or not fpath.exists():
+                np.save(fpath, sample_frames(video_dir / f"{vid}.mp4", nf, sz))
+            mpath = proc / "mel" / f"{vid}.npy"
+            if overwrite or not mpath.exists():
+                src = audio_dir / f"{vid}.wav"
+                src = src if src.exists() else video_dir / f"{vid}.mp4"
+                np.save(mpath, log_mel(src, cfg["audio"]))
+        except Exception as e:  # noqa: BLE001 - one bad file must not kill the whole cache run
+            failed.append(vid)
+            print(f"\n[precompute] skipping {vid}: {e}")
+    ok = len(meta) - len(failed)
+    print(f"Cached frames + mel for {ok}/{len(meta)} clips under {proc}"
+          + (f"  ({len(failed)} failed, re-run build_metadata to exclude them: {failed})" if failed else ""))
 
 
 if __name__ == "__main__":

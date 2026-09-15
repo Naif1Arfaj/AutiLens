@@ -1,0 +1,229 @@
+{
+  "checkpoint": "models/vision_mean.pt",
+  "split": "test",
+  "modality": "vision",
+  "metrics": {
+    "macro_f1": 0.31656903180378887,
+    "micro_f1": 0.3343465045592705,
+    "macro_precision": 0.2713561365118189,
+    "macro_recall": 0.6284962406015038,
+    "macro_auroc": 0.5504650966527663,
+    "macro_auprc": 0.3211757709477482,
+    "ece": 0.20278413576331547,
+    "per_class": {
+      "Absence or Avoidance of Eye Contact": {
+        "support": 24,
+        "f1": 0.3076923076923077,
+        "precision": 0.4,
+        "recall": 0.25,
+        "auroc": 0.431159420289855,
+        "auprc": 0.5792154214174677,
+        "threshold": 0.49999999999999994
+      },
+      "Aggressive Behavior": {
+        "support": 8,
+        "f1": 0.21052631578947367,
+        "precision": 0.18181818181818182,
+        "recall": 0.25,
+        "auroc": 0.48717948717948717,
+        "auprc": 0.2034925403459886,
+        "threshold": 0.6
+      },
+      "Hyper- or Hyporeactivity to Sensory Input": {
+        "support": 8,
+        "f1": 0.2909090909090909,
+        "precision": 0.1702127659574468,
+        "recall": 1.0,
+        "auroc": 0.5865384615384616,
+        "auprc": 0.31350524475524477,
+        "threshold": 0.05
+      },
+      "Non-Responsiveness to Verbal Interaction": {
+        "support": 14,
+        "f1": 0.16666666666666666,
+        "precision": 0.2,
+        "recall": 0.14285714285714285,
+        "auroc": 0.4826839826839827,
+        "auprc": 0.35158364333629577,
+        "threshold": 0.6
+      },
+      "Non-Typical Language": {
+        "support": 12,
+        "f1": 0.4067796610169492,
+        "precision": 0.2553191489361702,
+        "recall": 1.0,
+        "auroc": 0.2833333333333333,
+        "auprc": 0.2017570846766396,
+        "threshold": 0.05
+      },
+      "Object Lining-Up": {
+        "support": 5,
+        "f1": 0.25806451612903225,
+        "precision": 0.15384615384615385,
+        "recall": 0.8,
+        "auroc": 0.7285714285714286,
+        "auprc": 0.265,
+        "threshold": 0.15
+      },
+      "Self-Hitting or Self-Injurious Behavior": {
+        "support": 4,
+        "f1": 0.3333333333333333,
+        "precision": 0.25,
+        "recall": 0.5,
+        "auroc": 0.7906976744186046,
+        "auprc": 0.21996753246753245,
+        "threshold": 0.7
+      },
+      "Self-Spinning or Spinning Objects": {
+        "support": 4,
+        "f1": 0.5714285714285714,
+        "precision": 0.6666666666666666,
+        "recall": 0.5,
+        "auroc": 0.686046511627907,
+        "auprc": 0.5577777777777777,
+        "threshold": 0.49999999999999994
+      },
+      "Upper Limb Stereotypies": {
+        "support": 19,
+        "f1": 0.5333333333333333,
+        "precision": 0.3902439024390244,
+        "recall": 0.8421052631578947,
+        "auroc": 0.4849624060150376,
+        "auprc": 0.47400391924599033,
+        "threshold": 0.2
+      },
+      "Background": {
+        "support": 1,
+        "f1": 0.08695652173913043,
+        "precision": 0.045454545454545456,
+        "recall": 1.0,
+        "auroc": 0.5434782608695652,
+        "auprc": 0.045454545454545456,
+        "threshold": 0.49999999999999994
+      }
+    },
+    "n_samples": 47
+  },
+  "confusion_rows_true_cols_pred": [
+    [
+      6,
+      5,
+      24,
+      7,
+      24,
+      14,
+      4,
+      1,
+      23,
+      10
+    ],
+    [
+      4,
+      2,
+      8,
+      2,
+      8,
+      2,
+      2,
+      0,
+      6,
+      2
+    ],
+    [
+      1,
+      1,
+      8,
+      0,
+      8,
+      4,
+      1,
+      1,
+      8,
+      6
+    ],
+    [
+      2,
+      4,
+      14,
+      2,
+      14,
+      9,
+      3,
+      1,
+      14,
+      6
+    ],
+    [
+      1,
+      4,
+      12,
+      4,
+      12,
+      6,
+      4,
+      1,
+      11,
+      3
+    ],
+    [
+      4,
+      1,
+      5,
+      0,
+      5,
+      4,
+      1,
+      1,
+      3,
+      4
+    ],
+    [
+      0,
+      3,
+      4,
+      0,
+      4,
+      1,
+      2,
+      0,
+      4,
+      1
+    ],
+    [
+      1,
+      0,
+      4,
+      1,
+      4,
+      3,
+      0,
+      2,
+      4,
+      3
+    ],
+    [
+      6,
+      7,
+      19,
+      6,
+      19,
+      10,
+      5,
+      0,
+      16,
+      4
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1
+    ]
+  ]
+}

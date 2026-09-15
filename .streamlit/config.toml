@@ -1,0 +1,15 @@
+# Streamlit chrome must match the tokens in app/theme.py, otherwise the custom
+# components and the framework's own widgets drift apart on theme switch.
+[theme]
+base = "light"
+primaryColor = "#0E7490"
+backgroundColor = "#F2FBFD"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#123C4A"
+font = "sans serif"
+
+[server]
+maxUploadSize = 50
+
+[browser]
+gatherUsageStats = false

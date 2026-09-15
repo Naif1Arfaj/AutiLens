@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import json
 
+import pandas as pd
+
 from src.config import load_config
 
 
@@ -12,6 +14,9 @@ def main(config_path: str | None = None) -> None:
     rows = [json.loads(f.read_text()) for f in sorted(reports.glob("*_cv.json"))]
     rows.sort(key=lambda r: -r["test_ensemble_metrics"]["macro_auprc"])
     (reports / "cv_summary.json").write_text(json.dumps(rows, indent=2, default=float))
+
+    meta = pd.read_csv(cfg.resolve_path("metadata_dir") / "metadata.csv")
+    n_pool = int(((meta.has_video == 1) & (meta.split != "test")).sum())
 
     L = ["# AutiLens AI - cross-validated results", "",
          "Subject-disjoint k-fold on pooled train+val; official test split held out. "
@@ -26,9 +31,9 @@ def main(config_path: str | None = None) -> None:
             f"| {r['test_single_model_macro_f1']['mean']:.3f} ± {r['test_single_model_macro_f1']['std']:.3f} "
             f"| {e['macro_f1']:.3f} | {e['macro_auprc']:.3f} | {e['macro_auroc']:.3f} | {e['ece']:.3f} |"
         )
-    L += ["", "_train+val pool = 148 usable clips. Absolute scores stay modest; the "
-          "cross-validated ensemble numbers are the ones to trust for the "
-          "vision-only vs. audio vs. vision+audio comparison (PDF §10)._"]
+    L += ["", f"_train+val pool = {n_pool} usable clips (test set held out throughout). "
+          "The cross-validated ensemble numbers are the ones to trust for the "
+          "vision-only vs. audio vs. vision+audio comparison (bootcamp guide §10)._"]
     (reports / "cv_summary.md").write_text("\n".join(L))
     print("\n".join(L))
 

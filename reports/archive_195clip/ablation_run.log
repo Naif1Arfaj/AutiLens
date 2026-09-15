@@ -1,0 +1,238 @@
+=== train vision_mean (modality=vision temporal=mean) ===
+device=mps  modality=vision  temporal=mean
+[001] loss=1.1279 val_macroF1=0.205 val_macroAUPRC=0.272 (1.5s)
+[002] loss=1.1023 val_macroF1=0.136 val_macroAUPRC=0.281 (1.0s)
+[003] loss=1.0492 val_macroF1=0.144 val_macroAUPRC=0.296 (1.0s)
+[004] loss=1.0765 val_macroF1=0.190 val_macroAUPRC=0.324 (1.0s)
+[005] loss=1.0192 val_macroF1=0.219 val_macroAUPRC=0.343 (1.0s)
+[006] loss=0.9904 val_macroF1=0.278 val_macroAUPRC=0.349 (1.0s)
+[007] loss=0.9578 val_macroF1=0.263 val_macroAUPRC=0.368 (1.0s)
+[008] loss=0.9292 val_macroF1=0.311 val_macroAUPRC=0.358 (1.0s)
+[009] loss=0.8436 val_macroF1=0.280 val_macroAUPRC=0.352 (1.0s)
+[010] loss=0.8469 val_macroF1=0.239 val_macroAUPRC=0.373 (1.0s)
+[011] loss=0.8066 val_macroF1=0.357 val_macroAUPRC=0.359 (1.0s)
+[012] loss=0.7859 val_macroF1=0.254 val_macroAUPRC=0.359 (1.0s)
+[013] loss=0.7570 val_macroF1=0.378 val_macroAUPRC=0.370 (1.0s)
+[014] loss=0.7100 val_macroF1=0.279 val_macroAUPRC=0.365 (1.0s)
+[015] loss=0.6950 val_macroF1=0.328 val_macroAUPRC=0.359 (1.0s)
+[016] loss=0.6069 val_macroF1=0.310 val_macroAUPRC=0.384 (1.0s)
+[017] loss=0.6093 val_macroF1=0.291 val_macroAUPRC=0.390 (1.0s)
+[018] loss=0.6014 val_macroF1=0.273 val_macroAUPRC=0.392 (1.0s)
+[019] loss=0.6036 val_macroF1=0.311 val_macroAUPRC=0.375 (1.0s)
+[020] loss=0.5038 val_macroF1=0.296 val_macroAUPRC=0.370 (1.0s)
+[021] loss=0.5068 val_macroF1=0.373 val_macroAUPRC=0.377 (1.0s)
+[022] loss=0.5168 val_macroF1=0.321 val_macroAUPRC=0.387 (1.0s)
+[023] loss=0.5073 val_macroF1=0.314 val_macroAUPRC=0.408 (1.0s)
+early stop at epoch 23 (best 0.378 @ 13)
+
+best val macro-F1 (0.5 thr) = 0.378 @ epoch 13  ->  /Users/naifalarfaj/Desktop/avasd_download/AutiLens/models/vision_mean.pt
+
+=== vision_mean on test (47 clips) ===
+macro-F1 0.317 | macro-AUPRC 0.321 | macro-AUROC 0.550 | ECE 0.203
+behavior                                    sup     F1      P      R  AUPRC
+Absence or Avoidance of Eye Contact          24   0.31   0.40   0.25   0.58
+Aggressive Behavior                           8   0.21   0.18   0.25   0.20
+Hyper- or Hyporeactivity to Sensory Input     8   0.29   0.17   1.00   0.31
+Non-Responsiveness to Verbal Interaction     14   0.17   0.20   0.14   0.35
+Non-Typical Language                         12   0.41   0.26   1.00   0.20
+Object Lining-Up                              5   0.26   0.15   0.80   0.27
+Self-Hitting or Self-Injurious Behavior       4   0.33   0.25   0.50   0.22
+Self-Spinning or Spinning Objects             4   0.57   0.67   0.50   0.56
+Upper Limb Stereotypies                      19   0.53   0.39   0.84   0.47
+Background                                    1   0.09   0.05   1.00   0.05
+=== train vision_lstm (modality=vision temporal=lstm) ===
+device=mps  modality=vision  temporal=lstm
+[001] loss=1.1310 val_macroF1=0.236 val_macroAUPRC=0.307 (3.2s)
+[002] loss=1.0886 val_macroF1=0.090 val_macroAUPRC=0.347 (1.0s)
+[003] loss=1.0946 val_macroF1=0.224 val_macroAUPRC=0.370 (1.0s)
+[004] loss=1.0800 val_macroF1=0.229 val_macroAUPRC=0.335 (1.0s)
+[005] loss=1.0389 val_macroF1=0.211 val_macroAUPRC=0.413 (1.0s)
+[006] loss=1.0164 val_macroF1=0.259 val_macroAUPRC=0.429 (1.1s)
+[007] loss=0.9737 val_macroF1=0.360 val_macroAUPRC=0.372 (1.0s)
+[008] loss=0.9465 val_macroF1=0.282 val_macroAUPRC=0.410 (1.0s)
+[009] loss=0.8178 val_macroF1=0.294 val_macroAUPRC=0.421 (1.0s)
+[010] loss=0.8608 val_macroF1=0.228 val_macroAUPRC=0.479 (1.0s)
+[011] loss=0.8070 val_macroF1=0.230 val_macroAUPRC=0.402 (1.0s)
+[012] loss=0.7488 val_macroF1=0.330 val_macroAUPRC=0.375 (1.1s)
+[013] loss=0.6955 val_macroF1=0.324 val_macroAUPRC=0.401 (1.0s)
+[014] loss=0.6572 val_macroF1=0.310 val_macroAUPRC=0.435 (1.0s)
+[015] loss=0.5943 val_macroF1=0.337 val_macroAUPRC=0.434 (1.0s)
+[016] loss=0.5548 val_macroF1=0.243 val_macroAUPRC=0.430 (1.0s)
+[017] loss=0.6003 val_macroF1=0.259 val_macroAUPRC=0.439 (1.1s)
+early stop at epoch 17 (best 0.360 @ 7)
+
+best val macro-F1 (0.5 thr) = 0.360 @ epoch 7  ->  /Users/naifalarfaj/Desktop/avasd_download/AutiLens/models/vision_lstm.pt
+
+=== vision_lstm on test (47 clips) ===
+macro-F1 0.278 | macro-AUPRC 0.303 | macro-AUROC 0.544 | ECE 0.222
+behavior                                    sup     F1      P      R  AUPRC
+Absence or Avoidance of Eye Contact          24   0.44   0.53   0.38   0.52
+Aggressive Behavior                           8   0.29   0.23   0.38   0.37
+Hyper- or Hyporeactivity to Sensory Input     8   0.29   0.17   1.00   0.43
+Non-Responsiveness to Verbal Interaction     14   0.21   0.20   0.21   0.29
+Non-Typical Language                         12   0.27   0.17   0.58   0.24
+Object Lining-Up                              5   0.25   0.16   0.60   0.19
+Self-Hitting or Self-Injurious Behavior       4   0.24   0.15   0.50   0.14
+Self-Spinning or Spinning Objects             4   0.27   0.18   0.50   0.37
+Upper Limb Stereotypies                      19   0.46   0.34   0.68   0.42
+Background                                    1   0.08   0.04   1.00   0.05
+=== train vision_transformer (modality=vision temporal=transformer) ===
+device=mps  modality=vision  temporal=transformer
+[001] loss=1.1343 val_macroF1=0.196 val_macroAUPRC=0.254 (1.7s)
+[002] loss=1.1083 val_macroF1=0.137 val_macroAUPRC=0.276 (1.0s)
+[003] loss=1.1187 val_macroF1=0.057 val_macroAUPRC=0.278 (1.0s)
+[004] loss=1.1185 val_macroF1=0.086 val_macroAUPRC=0.298 (1.0s)
+[005] loss=1.1059 val_macroF1=0.087 val_macroAUPRC=0.318 (1.2s)
+[006] loss=1.0977 val_macroF1=0.096 val_macroAUPRC=0.306 (1.1s)
+[007] loss=1.0807 val_macroF1=0.235 val_macroAUPRC=0.284 (1.0s)
+[008] loss=1.0668 val_macroF1=0.244 val_macroAUPRC=0.343 (1.1s)
+[009] loss=1.0021 val_macroF1=0.307 val_macroAUPRC=0.324 (1.0s)
+[010] loss=0.9444 val_macroF1=0.167 val_macroAUPRC=0.287 (1.0s)
+[011] loss=0.9419 val_macroF1=0.250 val_macroAUPRC=0.363 (1.0s)
+[012] loss=0.9194 val_macroF1=0.216 val_macroAUPRC=0.383 (1.0s)
+[013] loss=0.9524 val_macroF1=0.314 val_macroAUPRC=0.393 (1.0s)
+[014] loss=0.8708 val_macroF1=0.246 val_macroAUPRC=0.374 (1.0s)
+[015] loss=0.7374 val_macroF1=0.382 val_macroAUPRC=0.407 (1.0s)
+[016] loss=0.7968 val_macroF1=0.292 val_macroAUPRC=0.399 (1.1s)
+[017] loss=0.7171 val_macroF1=0.342 val_macroAUPRC=0.395 (1.1s)
+[018] loss=0.7217 val_macroF1=0.353 val_macroAUPRC=0.406 (1.0s)
+[019] loss=0.6382 val_macroF1=0.353 val_macroAUPRC=0.423 (1.0s)
+[020] loss=0.6190 val_macroF1=0.260 val_macroAUPRC=0.422 (1.0s)
+[021] loss=0.6734 val_macroF1=0.394 val_macroAUPRC=0.446 (1.0s)
+[022] loss=0.5764 val_macroF1=0.376 val_macroAUPRC=0.423 (1.2s)
+[023] loss=0.5542 val_macroF1=0.358 val_macroAUPRC=0.405 (1.2s)
+[024] loss=0.5670 val_macroF1=0.384 val_macroAUPRC=0.439 (1.2s)
+[025] loss=0.5522 val_macroF1=0.329 val_macroAUPRC=0.409 (1.2s)
+[026] loss=0.5164 val_macroF1=0.363 val_macroAUPRC=0.406 (1.2s)
+[027] loss=0.5168 val_macroF1=0.345 val_macroAUPRC=0.390 (1.3s)
+[028] loss=0.4628 val_macroF1=0.375 val_macroAUPRC=0.451 (1.3s)
+[029] loss=0.4711 val_macroF1=0.375 val_macroAUPRC=0.422 (1.1s)
+[030] loss=0.4760 val_macroF1=0.281 val_macroAUPRC=0.374 (1.4s)
+[031] loss=0.4849 val_macroF1=0.292 val_macroAUPRC=0.367 (1.2s)
+early stop at epoch 31 (best 0.394 @ 21)
+
+best val macro-F1 (0.5 thr) = 0.394 @ epoch 21  ->  /Users/naifalarfaj/Desktop/avasd_download/AutiLens/models/vision_transformer.pt
+
+=== vision_transformer on test (47 clips) ===
+macro-F1 0.264 | macro-AUPRC 0.311 | macro-AUROC 0.579 | ECE 0.168
+behavior                                    sup     F1      P      R  AUPRC
+Absence or Avoidance of Eye Contact          24   0.49   0.52   0.46   0.59
+Aggressive Behavior                           8   0.25   0.25   0.25   0.28
+Hyper- or Hyporeactivity to Sensory Input     8   0.29   0.17   1.00   0.18
+Non-Responsiveness to Verbal Interaction     14   0.09   0.11   0.07   0.28
+Non-Typical Language                         12   0.41   0.26   1.00   0.37
+Object Lining-Up                              5   0.32   0.20   0.80   0.44
+Self-Hitting or Self-Injurious Behavior       4   0.00   0.00   0.00   0.16
+Self-Spinning or Spinning Objects             4   0.24   0.15   0.50   0.26
+Upper Limb Stereotypies                      19   0.56   0.42   0.84   0.52
+Background                                    1   0.00   0.00   0.00   0.03
+=== train audio_transformer (modality=audio temporal=transformer) ===
+device=mps  modality=audio  temporal=transformer
+[001] loss=1.1124 val_macroF1=0.079 val_macroAUPRC=0.277 (1.1s)
+[002] loss=1.0928 val_macroF1=0.224 val_macroAUPRC=0.306 (0.6s)
+[003] loss=1.0763 val_macroF1=0.262 val_macroAUPRC=0.321 (0.5s)
+[004] loss=1.0864 val_macroF1=0.262 val_macroAUPRC=0.260 (0.5s)
+[005] loss=1.0732 val_macroF1=0.230 val_macroAUPRC=0.286 (0.5s)
+[006] loss=1.0719 val_macroF1=0.209 val_macroAUPRC=0.283 (0.5s)
+[007] loss=1.0582 val_macroF1=0.243 val_macroAUPRC=0.287 (0.5s)
+[008] loss=1.0518 val_macroF1=0.252 val_macroAUPRC=0.293 (0.5s)
+[009] loss=1.0733 val_macroF1=0.275 val_macroAUPRC=0.315 (0.5s)
+[010] loss=1.0596 val_macroF1=0.243 val_macroAUPRC=0.297 (0.5s)
+[011] loss=1.0602 val_macroF1=0.315 val_macroAUPRC=0.262 (0.5s)
+[012] loss=1.0271 val_macroF1=0.225 val_macroAUPRC=0.298 (0.5s)
+[013] loss=1.0296 val_macroF1=0.267 val_macroAUPRC=0.264 (0.5s)
+[014] loss=1.0209 val_macroF1=0.284 val_macroAUPRC=0.282 (0.5s)
+[015] loss=1.0054 val_macroF1=0.240 val_macroAUPRC=0.267 (0.5s)
+[016] loss=0.9873 val_macroF1=0.237 val_macroAUPRC=0.266 (0.5s)
+[017] loss=0.9811 val_macroF1=0.291 val_macroAUPRC=0.278 (0.5s)
+[018] loss=0.9703 val_macroF1=0.288 val_macroAUPRC=0.278 (0.5s)
+[019] loss=0.9873 val_macroF1=0.202 val_macroAUPRC=0.281 (0.5s)
+[020] loss=0.9677 val_macroF1=0.270 val_macroAUPRC=0.248 (0.5s)
+[021] loss=0.9566 val_macroF1=0.267 val_macroAUPRC=0.280 (0.5s)
+early stop at epoch 21 (best 0.315 @ 11)
+
+best val macro-F1 (0.5 thr) = 0.315 @ epoch 11  ->  /Users/naifalarfaj/Desktop/avasd_download/AutiLens/models/audio_transformer.pt
+
+=== audio_transformer on test (47 clips) ===
+macro-F1 0.305 | macro-AUPRC 0.263 | macro-AUROC 0.540 | ECE 0.254
+behavior                                    sup     F1      P      R  AUPRC
+Absence or Avoidance of Eye Contact          24   0.50   0.55   0.46   0.53
+Aggressive Behavior                           8   0.33   0.20   0.88   0.35
+Hyper- or Hyporeactivity to Sensory Input     8   0.34   0.22   0.75   0.23
+Non-Responsiveness to Verbal Interaction     14   0.43   0.30   0.79   0.33
+Non-Typical Language                         12   0.42   0.27   1.00   0.24
+Object Lining-Up                              5   0.24   0.14   1.00   0.27
+Self-Hitting or Self-Injurious Behavior       4   0.09   0.06   0.25   0.10
+Self-Spinning or Spinning Objects             4   0.05   0.03   0.25   0.07
+Upper Limb Stereotypies                      19   0.58   0.40   1.00   0.41
+Background                                    1   0.07   0.04   1.00   0.09
+=== train av_transformer (modality=av temporal=transformer) ===
+device=mps  modality=av  temporal=transformer
+[001] loss=1.1335 val_macroF1=0.198 val_macroAUPRC=0.307 (2.4s)
+[002] loss=1.1114 val_macroF1=0.190 val_macroAUPRC=0.314 (1.5s)
+[003] loss=1.0732 val_macroF1=0.248 val_macroAUPRC=0.344 (1.5s)
+[004] loss=1.0931 val_macroF1=0.283 val_macroAUPRC=0.375 (1.5s)
+[005] loss=1.0696 val_macroF1=0.258 val_macroAUPRC=0.338 (1.5s)
+[006] loss=1.0659 val_macroF1=0.266 val_macroAUPRC=0.338 (1.5s)
+[007] loss=1.0333 val_macroF1=0.270 val_macroAUPRC=0.332 (1.5s)
+[008] loss=0.9947 val_macroF1=0.263 val_macroAUPRC=0.346 (1.5s)
+[009] loss=0.9598 val_macroF1=0.317 val_macroAUPRC=0.391 (1.6s)
+[010] loss=0.9342 val_macroF1=0.259 val_macroAUPRC=0.430 (1.5s)
+[011] loss=0.8654 val_macroF1=0.386 val_macroAUPRC=0.400 (1.6s)
+[012] loss=0.8662 val_macroF1=0.217 val_macroAUPRC=0.353 (1.6s)
+[013] loss=0.8497 val_macroF1=0.290 val_macroAUPRC=0.433 (1.5s)
+[014] loss=0.7715 val_macroF1=0.277 val_macroAUPRC=0.427 (1.5s)
+[015] loss=0.7415 val_macroF1=0.299 val_macroAUPRC=0.456 (1.6s)
+[016] loss=0.7846 val_macroF1=0.380 val_macroAUPRC=0.459 (1.6s)
+[017] loss=0.6777 val_macroF1=0.350 val_macroAUPRC=0.487 (1.6s)
+[018] loss=0.6392 val_macroF1=0.310 val_macroAUPRC=0.458 (1.7s)
+[019] loss=0.5961 val_macroF1=0.391 val_macroAUPRC=0.494 (1.6s)
+[020] loss=0.5652 val_macroF1=0.303 val_macroAUPRC=0.465 (1.6s)
+[021] loss=0.5542 val_macroF1=0.346 val_macroAUPRC=0.488 (1.6s)
+[022] loss=0.5586 val_macroF1=0.408 val_macroAUPRC=0.501 (1.7s)
+[023] loss=0.5327 val_macroF1=0.346 val_macroAUPRC=0.478 (1.5s)
+[024] loss=0.4947 val_macroF1=0.407 val_macroAUPRC=0.496 (1.6s)
+[025] loss=0.5252 val_macroF1=0.376 val_macroAUPRC=0.497 (1.6s)
+[026] loss=0.4369 val_macroF1=0.363 val_macroAUPRC=0.455 (1.6s)
+[027] loss=0.4766 val_macroF1=0.434 val_macroAUPRC=0.510 (1.6s)
+[028] loss=0.4198 val_macroF1=0.366 val_macroAUPRC=0.487 (1.6s)
+[029] loss=0.4387 val_macroF1=0.398 val_macroAUPRC=0.493 (1.6s)
+[030] loss=0.4302 val_macroF1=0.395 val_macroAUPRC=0.499 (1.6s)
+[031] loss=0.4342 val_macroF1=0.374 val_macroAUPRC=0.486 (1.6s)
+[032] loss=0.3720 val_macroF1=0.417 val_macroAUPRC=0.519 (1.6s)
+[033] loss=0.3948 val_macroF1=0.355 val_macroAUPRC=0.498 (1.6s)
+[034] loss=0.3773 val_macroF1=0.319 val_macroAUPRC=0.494 (1.6s)
+[035] loss=0.3609 val_macroF1=0.352 val_macroAUPRC=0.505 (1.6s)
+[036] loss=0.4116 val_macroF1=0.397 val_macroAUPRC=0.493 (1.5s)
+[037] loss=0.3337 val_macroF1=0.413 val_macroAUPRC=0.459 (1.6s)
+early stop at epoch 37 (best 0.434 @ 27)
+
+best val macro-F1 (0.5 thr) = 0.434 @ epoch 27  ->  /Users/naifalarfaj/Desktop/avasd_download/AutiLens/models/av_transformer.pt
+
+=== av_transformer on test (47 clips) ===
+macro-F1 0.263 | macro-AUPRC 0.346 | macro-AUROC 0.572 | ECE 0.177
+behavior                                    sup     F1      P      R  AUPRC
+Absence or Avoidance of Eye Contact          24   0.48   0.56   0.42   0.62
+Aggressive Behavior                           8   0.00   0.00   0.00   0.31
+Hyper- or Hyporeactivity to Sensory Input     8   0.29   0.17   1.00   0.18
+Non-Responsiveness to Verbal Interaction     14   0.15   0.15   0.14   0.33
+Non-Typical Language                         12   0.41   0.26   1.00   0.26
+Object Lining-Up                              5   0.33   0.23   0.60   0.59
+Self-Hitting or Self-Injurious Behavior       4   0.22   0.20   0.25   0.22
+Self-Spinning or Spinning Objects             4   0.25   0.17   0.50   0.42
+Upper Limb Stereotypies                      19   0.50   0.44   0.58   0.49
+Background                                    1   0.00   0.00   0.00   0.04
+# AutiLens AI - ablation study (test split)
+
+Test clips: 47  |  subject-disjoint splits  |  per-class thresholds tuned on validation.
+
+| model | modality | macro-F1 | macro-AUPRC | macro-AUROC | micro-F1 | ECE |
+|---|---|---|---|---|---|---|
+| vision_mean | vision | 0.317 | 0.321 | 0.550 | 0.334 | 0.203 |
+| vision_lstm | vision | 0.278 | 0.303 | 0.544 | 0.304 | 0.222 |
+| vision_transformer | vision | 0.264 | 0.311 | 0.579 | 0.340 | 0.168 |
+| audio_transformer | audio | 0.305 | 0.263 | 0.540 | 0.349 | 0.254 |
+| av_transformer | av | 0.263 | 0.346 | 0.572 | 0.339 | 0.177 |
+
+_Small research dataset (train=121 clips): absolute scores are low and high-variance; read this as a relative modality/temporal comparison, not a benchmark._
+Done. See reports/ablation_summary.md

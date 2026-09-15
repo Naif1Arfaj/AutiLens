@@ -17,19 +17,37 @@ from sklearn.metrics import (
 )
 
 
-def tune_thresholds(y_true: np.ndarray, y_prob: np.ndarray) -> np.ndarray:
-    """Per-class threshold maximising F1 on the given (validation) set."""
-    thr = np.full(y_true.shape[1], 0.5)
-    grid = np.linspace(0.05, 0.95, 19)
-    for c in range(y_true.shape[1]):
+def tune_thresholds(y_true: np.ndarray, y_prob: np.ndarray,
+                    min_precision: float = 0.0, grid_points: int = 37) -> np.ndarray:
+    """Per-class decision threshold tuned on out-of-fold / validation predictions.
+
+    Maximises F1 **subject to precision >= min_precision**. Without a floor,
+    rare classes collapse to "predict everything" (an earlier run had
+    `Non-Typical Language` at recall 1.00 / precision 0.23).
+
+    If the floor is unreachable for a class, fall back to the plain best-F1
+    threshold. Falling back to the highest-precision threshold instead would
+    silence the class entirely -- a detector that never fires is worse than an
+    imprecise one, and it also drags macro-F1 down by a full class.
+    """
+    n_cls = y_true.shape[1]
+    thr = np.full(n_cls, 0.5)
+    grid = np.linspace(0.05, 0.95, grid_points)
+    for c in range(n_cls):
         if y_true[:, c].sum() == 0:
             continue
-        best_f1, best_t = -1.0, 0.5
+        best_con_f1, best_con_t = -1.0, None      # satisfying the precision floor
+        best_any_f1, best_any_t = -1.0, 0.5       # unconstrained fallback
         for t in grid:
-            f1 = f1_score(y_true[:, c], (y_prob[:, c] >= t).astype(int), zero_division=0)
-            if f1 > best_f1:
-                best_f1, best_t = f1, t
-        thr[c] = best_t
+            pred = (y_prob[:, c] >= t).astype(int)
+            f1 = f1_score(y_true[:, c], pred, zero_division=0)
+            if f1 > best_any_f1:
+                best_any_f1, best_any_t = f1, t
+            if f1 > best_con_f1:
+                prec = precision_score(y_true[:, c], pred, zero_division=0)
+                if prec >= min_precision:
+                    best_con_f1, best_con_t = f1, t
+        thr[c] = best_con_t if (best_con_t is not None and best_con_f1 > 0) else best_any_t
     return thr
 
 
@@ -41,9 +59,14 @@ def _safe_auc(fn, yt, yp):
 
 
 def compute_metrics(y_true, y_prob, labels, thresholds=None) -> dict:
+    """``thresholds`` may be a (n_classes,) vector or, under nested CV, a
+    (n_samples, n_classes) matrix — each outer fold contributes rows carrying the
+    thresholds that were fitted on *its* inner split and frozen before scoring.
+    Both broadcast correctly against ``y_prob``."""
     y_true = np.asarray(y_true)
     y_prob = np.asarray(y_prob)
     thr = np.full(y_true.shape[1], 0.5) if thresholds is None else np.asarray(thresholds)
+    per_sample_thr = thr.ndim == 2
     y_pred = (y_prob >= thr).astype(int)
 
     per_class = {}
@@ -56,7 +79,10 @@ def compute_metrics(y_true, y_prob, labels, thresholds=None) -> dict:
             "recall": float(recall_score(yt, pr, zero_division=0)),
             "auroc": _safe_auc(roc_auc_score, yt, yp),
             "auprc": _safe_auc(average_precision_score, yt, yp),
-            "threshold": float(thr[i]),
+            # With per-fold thresholds there is no single value; report the mean
+            # and the spread so a collapsed (leaked) fit is visible.
+            "threshold": float(thr[:, i].mean()) if per_sample_thr else float(thr[i]),
+            **({"threshold_std": float(thr[:, i].std())} if per_sample_thr else {}),
         }
 
     present = [i for i in range(y_true.shape[1]) if y_true[:, i].sum() > 0]
