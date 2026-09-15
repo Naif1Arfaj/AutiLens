@@ -90,6 +90,7 @@ Stage 1, 4-family scope, nested CV, 3 seeds each:
 | **base — swin3d_t, mean-pool** | **0.567 ± 0.015** | **0.532 ± 0.014** | **0.728 ± 0.008** | — |
 | attention window aggregator | 0.552 ± 0.018 | 0.510 ± 0.005 | 0.723 ± 0.008 | −0.015 F1 (within noise) |
 | multi-backbone concat (swin3d_t + r2plus1d) | 0.507 ± 0.005 | 0.434 ± 0.013 | 0.643 ± 0.008 | **−0.061 F1, −0.099 P, −0.085 AUROC** |
+| windows 3→5 (`configs/w5.yaml`) | 0.568 ± 0.021 | 0.538 ± 0.023 | 0.730 ± 0.008 | +0.001 F1 (noise) |
 
 **The plan predicted +0.02–0.04 for the ensemble; it delivered −0.061.** That estimate
 was wrong. Concatenating to 1280-d adds first-layer parameters faster than it adds
@@ -99,6 +100,16 @@ information loss, not just threshold placement — this is not recoverable by re
 
 The attention aggregator is a tie (−0.015 against a ±0.015 std): more parameters, no
 gain, so the simpler mean-pool wins on parsimony.
+
+**All three candidates rejected — none helped.** The one predicted most confidently
+(multi-backbone, +0.02–0.04) was the worst (−0.061). 3→5 windows moved macro-F1 by
+0.001 against a ±0.015 std; its AUPRC +0.009 looks larger but the 5-window variance is
+6× wider there (±0.012 vs ±0.002), so it is not claimable.
+
+The pattern across all three: **on 335 clips with a frozen backbone, the head is not the
+bottleneck.** More head capacity, more input views and more temporal coverage all fail
+to convert into accuracy. That is the argument for LoRA being the right next lever — it
+is the only change that alters the features themselves rather than how they are consumed.
 
 **Both code paths are kept** (`--backbone a,b`, `--aggregate attention`) because the
 negative result is worth being able to reproduce — but neither is enabled by default.
