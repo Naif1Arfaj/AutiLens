@@ -14,8 +14,10 @@ data/packed/
 # `data/processed/` alone missed data/processed_w5/ (the isolated 3->5
 # experiment cache), which git add -A then swept into a commit.
 data/processed*/
-data/metadata/
-data/splits/
+# data/metadata/ and data/splits/ are TRACKED (60 KB): they are annotation
+# metadata derived from the public AV-ASD CSVs -- no media -- and without them
+# the repo cannot train anywhere but the machine that generated them. Colab hit
+# exactly that: FileNotFoundError on data/splits/train.txt.
 models/*.pt
 models/*_train.json
 reports/*.png

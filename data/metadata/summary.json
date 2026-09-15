@@ -1,0 +1,38 @@
+{
+  "labels": [
+    "Absence or Avoidance of Eye Contact",
+    "Aggressive Behavior",
+    "Hyper- or Hyporeactivity to Sensory Input",
+    "Non-Responsiveness to Verbal Interaction",
+    "Non-Typical Language",
+    "Object Lining-Up",
+    "Self-Hitting or Self-Injurious Behavior",
+    "Self-Spinning or Spinning Objects",
+    "Upper Limb Stereotypies"
+  ],
+  "n_annotated": 428,
+  "n_with_video": 427,
+  "n_with_audio_and_video": 427,
+  "per_split_total": {
+    "train": 246,
+    "test": 93,
+    "val": 89
+  },
+  "per_split_usable": {
+    "train": 246,
+    "test": 92,
+    "val": 89
+  },
+  "usable_positive_counts": {
+    "Absence or Avoidance of Eye Contact": 93,
+    "Aggressive Behavior": 83,
+    "Hyper- or Hyporeactivity to Sensory Input": 88,
+    "Non-Responsiveness to Verbal Interaction": 66,
+    "Non-Typical Language": 70,
+    "Object Lining-Up": 24,
+    "Self-Hitting or Self-Injurious Behavior": 63,
+    "Self-Spinning or Spinning Objects": 59,
+    "Upper Limb Stereotypies": 163
+  },
+  "subject_disjoint": true
+}
