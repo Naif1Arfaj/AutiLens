@@ -172,6 +172,29 @@ def validate(cfg, out_dir: Path, n: int = 40, quality: int = QUALITY,
     return ok
 
 
+def unpack_mel(cfg, out_dir: Path) -> None:
+    """Expand mel_f16.npz back into <processed>/mel/*.npy.
+
+    The packer ships one compressed npz, but `extract_features --only audio`
+    (and the rest of the pipeline) expect per-clip .npy files. Without this the
+    audio feature cache cannot be rebuilt on a fresh machine, and cv_lora stops
+    with "Found mel_f16.npz but no audio FEATURE cache".
+    """
+    proc = cfg.resolve_path("processed_dir")
+    mel_dir = proc / "mel"
+    mel_dir.mkdir(parents=True, exist_ok=True)
+    src = out_dir / "mel_f16.npz"
+    if not src.exists():
+        src = proc / "mel_f16.npz"          # notebook copies it next to the caches
+    if not src.exists():
+        raise SystemExit(f"mel_f16.npz not found in {out_dir} or {proc}")
+    z = np.load(src)
+    for k in tqdm(z.files, desc="unpack mel"):
+        np.save(mel_dir / f"{k}.npy", z[k].astype(np.float32))
+    print(f"  {len(z.files)} mel arrays -> {mel_dir}")
+    print("  next: python -m src.preprocessing.extract_features --only audio")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default=None)
@@ -180,12 +203,17 @@ if __name__ == "__main__":
                     help="JPEG quality; ignored for lossless formats")
     ap.add_argument("--format", choices=list(FORMATS), default=DEFAULT_FORMAT)
     ap.add_argument("--validate", action="store_true")
+    ap.add_argument("--unpack-mel", action="store_true",
+                    help="expand mel_f16.npz -> <processed>/mel/*.npy")
     ap.add_argument("--n", type=int, default=40)
     a = ap.parse_args()
     cfg = load_config(a.config)
     out = Path(a.out)
     if not out.is_absolute():
         out = Path(__file__).resolve().parents[1] / out
+    if a.unpack_mel:
+        unpack_mel(cfg, out)
+        raise SystemExit(0)
     if a.validate:
         raise SystemExit(0 if validate(cfg, out, a.n, a.quality, a.format) else 1)
     pack(cfg, out, a.quality, a.format)
