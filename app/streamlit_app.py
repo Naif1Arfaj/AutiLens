@@ -91,6 +91,15 @@ def clip_duration(path: str) -> float:
 ui.masthead()
 ui.safety_banner()
 
+# Landing screen: what the project is, until the reader chooses to start. The
+# masthead and the non-diagnostic banner stay above it on purpose -- that warning
+# should be the first thing read, not something revealed after a click.
+if not st.session_state.get("started"):
+    from app import landing
+
+    landing.render()
+    st.stop()
+
 cards, best = ranked_models(models_signature(MODELS))
 if best is None:
     ui.error_card("No trained checkpoint found in models/", [
@@ -163,9 +172,17 @@ if "pred" not in st.session_state:
         with st.status("Analysing clip…", expanded=True) as status:
             st.write(f"Loading **{best.tag}** — frozen {best.backbone} backbone"
                      f"{f' + {best.folds} fold heads' if best.folds > 1 else ''}")
-            predictor, n_folds = get_predictor(str(best.path))
-            st.write("Sampling windows, running the backbone and scoring each fold…")
-            st.session_state["pred"] = predictor.predict(tmp)
+            stage1 = select_best(MODELS, n_classes=4)
+            two = (get_two_stage(str(stage1.path), str(MODELS / STAGE2_CKPT))
+                   if stage1 and (MODELS / STAGE2_CKPT).exists() else None)
+            if two is not None:
+                st.write("Two-stage: behavior families, then the specific behavior "
+                         "within each detected family — one backbone pass for both.")
+                st.session_state["pred"] = two.predict(tmp)
+            else:
+                predictor, n_folds = get_predictor(str(best.path))
+                st.write("Sampling windows, running the backbone and scoring each fold…")
+                st.session_state["pred"] = predictor.predict(tmp)
             status.update(label="Analysis complete", state="complete", expanded=False)
     except Exception:
         ui.error_card("The computer-vision step could not process this file.", [
@@ -187,10 +204,21 @@ if pred.task == MULTICLASS:
     ui.section("Model result", "One class per clip: these classes are mutually exclusive.")
     ui.verdict(pred.top_class, pred.behaviors)
 else:
+    fams = getattr(pred, "families", None)
+    if fams:
+        n_fam = sum(1 for f in fams if f["detected"])
+        ui.section("Stage 1 — behavior families",
+                   f"{n_fam} of {len(fams)} families crossed their threshold. "
+                   "Families are scored more reliably than individual behaviors "
+                   "(repetitive-motor AUROC 0.83 vs 0.59 for social-communicative), "
+                   "so read these first.")
+        ui.behavior_rows(fams)
+
     n_hit = sum(1 for b in pred.behaviors if b["detected"])
-    ui.section("Model result",
-               f"{n_hit} of {len(pred.behaviors)} behaviors crossed their threshold. "
-               "Behaviors are independent — any number can fire at once.")
+    ui.section("Stage 2 — specific behavior" if fams else "Model result",
+               f"{n_hit} of {len(pred.behaviors)} behaviors crossed their threshold"
+               + (", restricted to the families detected above. " if fams else ". ")
+               + "Behaviors are independent — any number can fire at once.")
     ui.behavior_rows(pred.behaviors)
 
 ui.section("Evidence")

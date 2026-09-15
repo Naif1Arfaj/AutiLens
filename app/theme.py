@@ -62,17 +62,30 @@ def tokens() -> dict:
     return DARK if active_theme() == "dark" else LIGHT
 
 
+def _flatten(css: str) -> str:
+    """Drop blank lines so markdown treats the sheet as one unbroken HTML block."""
+    return "\n".join(line for line in css.splitlines() if line.strip())
+
+
 def inject() -> None:
     """Emit the stylesheet.
 
-    Via ``st.html``, never ``st.markdown(unsafe_allow_html=True)``. A blank line
-    closes an HTML block in markdown, so the markdown route accepted this sheet
-    only as far as its first blank line and printed every rule after that onto
-    the page as prose. ``st.html`` skips the markdown parser entirely, which is
-    what keeps the blank lines below purely cosmetic.
+    Two delivery bugs bound this together, so read both before changing it.
+
+    1. ``st.markdown(unsafe_allow_html=True)`` runs the sheet through a markdown
+       parser, where a **blank line closes an HTML block**. The sheet was
+       accepted only as far as its first blank line and every rule after that was
+       printed onto the page as prose.
+    2. ``st.html`` skips markdown, but its sanitizer **strips the whole
+       ``<style>`` element**, so the page rendered with no styling at all.
+
+    So: markdown delivery, with the blank lines stripped on the way out. They stay
+    in the source below because they are what makes 300 lines of CSS readable;
+    ``_flatten`` removes them at the boundary. ``scripts/check_ui_render.py``
+    asserts the sheet arrives whole, which is what catches either bug returning.
     """
     t = tokens()
-    st.html(f"""
+    css = f"""
 <style>
 @import url('{FONTS}');
 
@@ -143,6 +156,14 @@ a:focus-visible, button:focus-visible, input:focus-visible,
 [data-testid="stSidebar"] small {{ color:var(--al-muted) !important; }}
 [data-testid="stSidebar"] [data-baseweb="select"] > div {{
   background:var(--al-surface-alt); border-color:var(--al-border); }}
+
+/* Our own icons, drawn with the Material Symbols font Streamlit already loads
+   (st.html strips <svg>, so inline SVG is not an option here). */
+.al-ico {{ font-family:'Material Symbols Rounded','Material Symbols Outlined';
+  font-weight:normal; font-style:normal; line-height:1; letter-spacing:normal;
+  text-transform:none; white-space:nowrap; direction:ltr; display:inline-block;
+  vertical-align:middle; -webkit-font-feature-settings:'liga';
+  -webkit-font-smoothing:antialiased; font-variation-settings:'wght' 500; }}
 
 /* ---------- masthead --------------------------------------------------- */
 .al-mast {{ display:flex; align-items:center; gap:.9rem; margin-bottom:.35rem; }}
@@ -274,6 +295,104 @@ a:focus-visible, button:focus-visible, input:focus-visible,
 [data-testid="stVerticalBlockBorderWrapper"] {{ border-radius:var(--al-r); }}
 .stTabs [data-baseweb="tab"] {{ font-family:'Lexend',sans-serif; font-weight:500; }}
 
+/* The scroll shim is a zero-height component iframe; keep it from reserving
+   vertical space in the layout. */
+.stApp:has(.al-nav) [data-testid="stIFrame"] {{ height:0 !important; display:block; }}
+.stApp:has(.al-nav) [data-testid="stElementContainer"]:has([data-testid="stIFrame"]) {{
+  height:0 !important; min-height:0 !important; margin:0 !important; overflow:hidden; }}
+
+/* ---------- landing nav ------------------------------------------------ */
+/* position:sticky is unreliable here: Streamlit wraps every element in its own
+   short container, so a sticky child has nothing tall to stick within. Fixed
+   positioning is anchored to the viewport instead, and .block-container gets
+   extra top padding on the landing so nothing hides underneath. */
+/* Streamlit's own toolbar floats top-right. The Deploy button sat on top of our
+   CTA, so it is hidden and the bar keeps clearance for the remaining menu. */
+[data-testid="stAppDeployButton"] {{ display:none !important; }}
+.al-nav {{ position:fixed; top:0; left:0; right:0; z-index:var(--z-sticky);
+  display:flex; align-items:center; gap:1.1rem; flex-wrap:wrap;
+  padding:.62rem clamp(1rem,6vw,2.2rem);
+  padding-right:calc(clamp(1rem,6vw,2.2rem) + 44px);
+  background:color-mix(in srgb, var(--al-bg) 92%, transparent);
+  backdrop-filter:saturate(1.4) blur(9px);
+  -webkit-backdrop-filter:saturate(1.4) blur(9px);
+  border-bottom:1px solid var(--al-border); }}
+.al-nav-brand {{ display:inline-flex; align-items:center; gap:.4rem;
+  font-family:'Lexend',sans-serif; font-weight:600; font-size:.95rem;
+  color:var(--al-text); }}
+.al-nav-links {{ display:flex; gap:.25rem; flex-wrap:wrap; margin-left:auto; }}
+.al-nav-links a {{ color:var(--al-muted); text-decoration:none; font-size:.88rem;
+  font-weight:500; padding:.42rem .6rem; border-radius:8px;
+  transition:color .15s ease, background .15s ease; }}
+.al-nav-links a:hover {{ color:var(--al-text); background:var(--al-surface-alt); }}
+.al-nav-cta {{ background:var(--al-primary); color:var(--al-surface) !important;
+  text-decoration:none; font-family:'Lexend',sans-serif; font-weight:500;
+  font-size:.88rem; padding:.5rem .95rem; border-radius:9px;
+  display:inline-flex; align-items:center; min-height:38px;
+  transition:transform .15s ease, box-shadow .15s ease; }}
+.al-nav-cta:hover {{ transform:translateY(-1px); box-shadow:var(--al-shadow); }}
+/* Land anchored sections below the fixed bar rather than under it. */
+.al-anchor {{ scroll-margin-top:78px; }}
+/* The nav is the landing's first element; give the page room for it. */
+.stApp:has(.al-nav) .block-container {{ padding-top:4.6rem; }}
+@media (max-width: 680px) {{
+  .al-nav {{ gap:.5rem; padding:.5rem .8rem; }}
+  .al-nav-links {{ order:3; width:100%; margin-left:0; }}
+  .al-nav-cta {{ margin-left:auto; }}
+  .stApp:has(.al-nav) .block-container {{ padding-top:7rem; }}
+}}
+
+/* ---------- landing screen -------------------------------------------- */
+.al-hero {{ padding:.5rem 0 1.4rem; }}
+.al-hero h2 {{ font-size:2.05rem !important; line-height:1.18; margin:.2rem 0 .6rem !important;
+  letter-spacing:-.025em; max-width:20ch; }}
+.al-hero .al-lede {{ font-size:1.08rem; line-height:1.6; color:var(--al-muted);
+  max-width:62ch; margin:0; }}
+.al-tagline {{ display:inline-flex; align-items:center; gap:.45rem; font-size:.74rem;
+  font-weight:700; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--al-primary); background:var(--al-primary-soft);
+  border:1px solid var(--al-border-strong); border-radius:999px; padding:.3rem .75rem; }}
+
+/* Two-column prose blocks; collapse to one column on narrow screens. */
+.al-grid {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(248px,1fr));
+  gap:.9rem; margin:.3rem 0 .4rem; }}
+.al-tile {{ background:var(--al-surface); border:1px solid var(--al-border);
+  border-radius:var(--al-r); padding:1.05rem 1.15rem; }}
+.al-tile h4 {{ margin:.55rem 0 .3rem !important; font-size:1rem !important; }}
+.al-tile p {{ margin:0; font-size:.93rem; line-height:1.58; color:var(--al-muted); }}
+
+/* Numbered pipeline: clip -> stage 1 -> stage 2 -> report. */
+.al-flow {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:.8rem; }}
+.al-flow .s {{ position:relative; background:var(--al-surface-alt);
+  border:1px solid var(--al-border); border-radius:var(--al-r); padding:1rem 1.05rem; }}
+.al-flow .s .n {{ width:24px; height:24px; border-radius:50%; display:grid; place-items:center;
+  font-family:'Lexend',sans-serif; font-size:.76rem; font-weight:700;
+  background:var(--al-primary); color:var(--al-surface); margin-bottom:.55rem; }}
+.al-flow .s strong {{ display:block; font-size:.95rem; margin-bottom:.22rem; }}
+.al-flow .s span {{ font-size:.89rem; line-height:1.55; color:var(--al-muted); }}
+
+/* Behavior families, colour-keyed to match the results views. */
+.al-fam {{ border:1px solid var(--al-border); border-left:4px solid var(--al-primary);
+  border-radius:var(--al-r-sm); background:var(--al-surface); padding:.85rem 1rem;
+  margin-bottom:.6rem; }}
+.al-fam strong {{ font-size:.96rem; }}
+.al-fam ul {{ margin:.4rem 0 0; padding-left:1.05rem; }}
+.al-fam li {{ font-size:.89rem; color:var(--al-muted); line-height:1.5; }}
+
+/* "What it is not" — the guardrails, styled as a deliberate stop, not a footnote. */
+.al-not {{ background:var(--al-warn-soft); border:1px solid var(--al-warn-border);
+  border-radius:var(--al-r); padding:1.1rem 1.25rem; }}
+.al-not h4 {{ margin:0 0 .55rem !important; color:var(--al-warn) !important;
+  font-size:1rem !important; }}
+.al-not li {{ font-size:.93rem; line-height:1.6; margin-bottom:.28rem; }}
+.al-not ul {{ margin:0; padding-left:1.1rem; }}
+
+.al-limits li {{ font-size:.93rem; line-height:1.6; color:var(--al-muted); margin-bottom:.3rem; }}
+.al-limits ul {{ margin:0; padding-left:1.1rem; }}
+@media (max-width: 640px) {{
+  .al-hero h2 {{ font-size:1.6rem !important; }}
+}}
+
 /* Respect the user's motion setting (ui-ux-pro-max: reduced-motion). */
 @media (prefers-reduced-motion: reduce) {{
   *, *::before, *::after {{ animation:none !important; transition:none !important; }}
@@ -284,7 +403,8 @@ a:focus-visible, button:focus-visible, input:focus-visible,
   .al-steps {{ gap:.3rem; }} .al-step {{ font-size:.78rem; padding:.35rem .6rem; }}
 }}
 </style>
-""")
+"""
+    st.markdown(_flatten(css), unsafe_allow_html=True)
 
 
 #: Categorical colours for evidence blocks and the multi-class distribution.

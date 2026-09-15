@@ -1,0 +1,150 @@
+# AutiLens AI - default experiment configuration
+seed: 1337
+
+paths:
+  # Root of the full AV-ASD dataset (428 clips, all with video -- supersedes
+  # the earlier partial ../avasd_data download of 195 clips).
+  dataset_root: "/Users/naifalarfaj/Downloads/Suluk_AVASD"
+  clips_video: "/Users/naifalarfaj/Downloads/Suluk_AVASD/clips_video"
+  clips_audio: "/Users/naifalarfaj/Downloads/Suluk_AVASD/clips_audio"
+  csv_dir: "/Users/naifalarfaj/Downloads/Suluk_AVASD/csvs"
+  # Generated / cached artefacts (relative to project root).
+  metadata_dir: "data/metadata"
+  splits_dir: "data/splits"
+  processed_dir: "data/processed_w5"
+  models_dir: "models"
+  reports_dir: "reports"
+
+# This full download has no "Background" column (9 behavior labels only,
+# vs. 10 in the earlier partial download) -- see docs/short_report.md.
+labels:
+  - "Absence or Avoidance of Eye Contact"
+  - "Aggressive Behavior"
+  - "Hyper- or Hyporeactivity to Sensory Input"
+  - "Non-Responsiveness to Verbal Interaction"
+  - "Non-Typical Language"
+  - "Object Lining-Up"
+  - "Self-Hitting or Self-Injurious Behavior"
+  - "Self-Spinning or Spinning Objects"
+  - "Upper Limb Stereotypies"
+
+# --- Stage 1 target: behavior families ---------------------------------------
+# A family label is the logical OR over its member labels.
+#
+# "Social-communicative" IS the AV-ASD authors' published *Social* domain
+# (DSM-V-TR + M-CHAT-R/F). The other three subdivide their single *RRB* domain,
+# because RRB as one class covers 87% of clips and degenerates into a trivial
+# classifier (F1 0.93 at recall 1.00, AUROC only 0.73).
+#
+# The subdivision is SEMANTIC, not data-driven: family members barely co-occur
+# (Upper Limb + Object Lining-Up have Jaccard 0.01). Do not present it as an
+# empirically discovered grouping.
+families:
+  "Repetitive motor":
+    - "Upper Limb Stereotypies"
+    - "Self-Spinning or Spinning Objects"
+    - "Object Lining-Up"
+  "Self-directed or aggressive":
+    - "Aggressive Behavior"
+    - "Self-Hitting or Self-Injurious Behavior"
+  "Social-communicative":
+    - "Absence or Avoidance of Eye Contact"
+    - "Non-Typical Language"
+    - "Non-Responsiveness to Verbal Interaction"
+  "Sensory reactivity":
+    - "Hyper- or Hyporeactivity to Sensory Input"
+
+video:
+  num_frames: 16          # frames sampled per clip
+  frame_size: 112         # square crop fed to the legacy (non-cached) pipeline
+  fps_sample: null        # if set, sample at fixed fps instead of uniform num_frames
+
+# --- fast pipeline: windowed sampling + frozen-backbone feature cache --------
+# The legacy pipeline spread `num_frames` across the WHOLE clip, so a 887 s clip
+# was sampled at 1 frame / 55 s and all 2-4 Hz stereotypy motion was aliased
+# away. Here each window is `num_frames` CONSECUTIVE frames at `target_fps`,
+# i.e. 1.6 s of real motion, and `n_windows` of them cover the clip.
+windows:
+  num_frames: 16
+  frame_size: 224         # swin3d_t expects 224; smaller backbones downscale
+  n_windows: 5            # EXPERIMENT: 5 windows (baseline config uses 3)
+  target_fps: 10          # frames/s inside a window
+
+audio:
+  sample_rate: 16000
+  n_mels: 64
+  n_fft: 400
+  hop_length: 160
+  max_seconds: 15.0       # was 10.0 -- stop truncating longer clips
+  n_variants: 4           # SpecAugment variants baked into the feature cache
+  spec_aug:
+    freq_masks: 2
+    freq_width: 12
+    time_masks: 2
+    time_width: 30
+
+features:
+  # Frozen backbones used purely as feature extractors. Because nothing in them
+  # trains, we run them ONCE and cache the vectors; head training then takes
+  # seconds instead of re-running the backbone every epoch.
+  vision_backbone: "swin3d_t"   # swin3d_t (K400 77.7%) | r2plus1d_18 (67.5%) | mc3_18 | r3d_18
+  audio_encoder: "resnet18_mel" # ImageNet ResNet18 over the mel spectrogram
+  flips: 2                      # 1 = original only, 2 = original + h-flip
+
+model:
+  modality: "av"          # one of: vision | audio | av  (used for ablation)
+  # 2D + temporal head:  resnet18 | resnet34 | efficientnet_b0
+  # 3D Kinetics backbone: r2plus1d_18 | mc3_18 | r3d_18   (temporal head bypassed)
+  vision_backbone: "r2plus1d_18"
+  freeze_backbone: true
+  embed_dim: 256
+  temporal: "transformer" # one of: mean | lstm | transformer  (2D backbones only)
+  temporal_layers: 1
+  temporal_heads: 4
+  dropout: 0.3
+
+train:
+  epochs: 40
+  batch_size: 8
+  lr: 0.0003
+  weight_decay: 0.0001
+  num_workers: 0
+  device: "auto"          # auto | cpu | mps | cuda
+  pos_weight_clip: 10.0   # cap on positive class weighting for BCE
+  early_stop_patience: 12
+  monitor: "val_macro_f1"
+  loss: "focal"           # bce | focal
+  focal_gamma: 2.0
+
+# --- head trained on top of the cached features (the only trainable part) ----
+head:
+  hidden: 512
+  dropout: 0.4
+  lr: 0.0005
+  weight_decay: 0.001
+  epochs: 120             # cheap: each epoch is a few ms over cached vectors
+  batch_size: 32
+  early_stop_patience: 25
+  mixup_alpha: 0.4        # multi-label mixup in FEATURE space (free with a cache)
+  aggregate: "mean"       # mean | attention  (how to pool the V window/flip variants)
+  loss: "focal"           # bce | focal
+  focal_gamma: 2.0
+  focal_alpha: 0.25       # replaces pos_weight; using both over-weighted positives
+  use_pos_weight: false
+
+eval:
+  default_threshold: 0.5
+  tune_thresholds: true   # pick per-class thresholds on the validation set
+  tta: true               # test-time augmentation: average original + h-flip
+  min_precision: 0.4      # threshold floor: stops the "predict everything" collapse
+  calibrate: true         # isotonic/Platt calibration fitted on out-of-fold preds
+
+cv:
+  folds: 5                # outer subject-disjoint k-fold (train+val pooled; test held out)
+  # Nested CV. Within each OUTER fold, an inner subject-disjoint split is carved
+  # from that fold's TRAINING portion. Early stopping, epoch selection AND the
+  # fitting of thresholds/calibrators all happen on the inner split only; those
+  # artefacts are then frozen before the outer fold is scored. Outer OOF
+  # predictions are therefore never a training, stopping or fitting signal.
+  inner_folds: 5          # inner split is 1/inner_folds of the outer training portion
+  target: "labels"        # labels (9 behaviors) | families (4 Stage-1 groups)

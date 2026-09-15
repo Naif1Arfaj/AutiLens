@@ -11,7 +11,9 @@ venv/
 models/**/*.pt
 # JPEG-packed cache staged for Colab upload (~430 MB)
 data/packed/
-data/processed/
+# `data/processed/` alone missed data/processed_w5/ (the isolated 3->5
+# experiment cache), which git add -A then swept into a commit.
+data/processed*/
 data/metadata/
 data/splits/
 models/*.pt

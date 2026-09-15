@@ -16,22 +16,26 @@ import streamlit as st
 
 from app.theme import series
 
+#: Streamlit's ``st.html`` sanitizer strips <svg> outright -- every inline icon
+#: rendered as an empty box. Streamlit already ships the Material Symbols
+#: Rounded font for its own icons, so we draw ours the same way: a span whose
+#: text is a ligature name. That is plain text, so nothing can strip it.
 _ICON = {
-    "lens": ('<circle cx="11" cy="11" r="6.4"/><path d="M15.8 15.8L21 21"/>'
-             '<circle cx="11" cy="11" r="2.1" fill="currentColor" stroke="none"/>'),
-    "check": '<path d="M4.5 12.5l5 5 10-11"/>',
-    "alert": ('<path d="M12 3.6L2.6 20h18.8L12 3.6z"/><path d="M12 10v4.4"/>'
-              '<circle cx="12" cy="17.4" r=".9" fill="currentColor" stroke="none"/>'),
+    "lens": "visibility",
+    "check": "check",
+    "alert": "warning",
+    "schedule": "schedule",
+    "person": "person",
+    "compare": "compare_arrows",
 }
 
 
 def icon(name: str, size: int = 18, color: str = "currentColor", label: str = "") -> str:
-    """Inline SVG. ``label`` gives icon-only controls an accessible name."""
+    """A Material Symbols ligature span. ``label`` names it for screen readers."""
     a11y = (f'role="img" aria-label="{html.escape(label)}"' if label
-            else 'aria-hidden="true" focusable="false"')
-    return (f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="none" '
-            f'stroke="{color}" stroke-width="1.9" stroke-linecap="round" '
-            f'stroke-linejoin="round" {a11y}>{_ICON[name]}</svg>')
+            else 'aria-hidden="true"')
+    return (f'<span class="al-ico" translate="no" {a11y} '
+            f'style="font-size:{size}px;color:{color}">{_ICON.get(name, name)}</span>')
 
 
 def _e(v) -> str:
@@ -54,6 +58,14 @@ def masthead() -> None:
     <p class="al-sub">Multimodal behavioral screening support &mdash; research prototype</p>
   </div>
 </div>""")
+    # The landing gate is otherwise one-way: once "started" is set there is no
+    # route back to the overview short of restarting the app. A link cannot
+    # clear session state (st.html runs no JavaScript), so this is a real button.
+    if st.session_state.get("started"):
+        if st.button("← Overview", key="al_back",
+                     help="Back to what this project is"):
+            st.session_state["started"] = False
+            st.rerun()
 
 
 def safety_banner() -> None:

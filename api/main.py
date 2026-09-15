@@ -22,7 +22,7 @@ from fastapi import FastAPI, File, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.inference import AutiLensPredictor
-from src.inference_fast import FastEnsemblePredictor
+from src.inference_fast import FastEnsemblePredictor, TwoStagePredictor
 from src.model_registry import select_best
 from src.llm_report import generate_llm_report
 
@@ -36,6 +36,7 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], all
 
 _predictor: AutiLensPredictor | FastEnsemblePredictor | None = None
 _n_folds: int = 0
+_two_stage: TwoStagePredictor | None = None
 
 
 def _resolve_card():
@@ -71,9 +72,31 @@ def _build_predictor(path: str):
     return AutiLensPredictor(path), 1
 
 
+#: Stage 2 is the existing 9-behavior model, used unchanged.
+STAGE2_CKPT = "autilens_v2.pt"
+
+
+def _build_two_stage():
+    """Stage 1 (4 behavior families) + Stage 2 (9 behaviors), one backbone pass.
+
+    Returns ``None`` when either half is missing, so the service degrades to
+    single-model serving rather than failing to start.
+    """
+    stage1 = select_best(MODELS_DIR, n_classes=4)
+    stage2 = MODELS_DIR / STAGE2_CKPT
+    if stage1 is None or not stage2.exists():
+        return None
+    try:
+        return TwoStagePredictor(stage1.path, stage2)
+    except Exception as exc:                      # incompatible feature setups etc.
+        print(f"[autilens] two-stage unavailable, falling back to single model: {exc}")
+        return None
+
+
 @app.on_event("startup")
 def _load() -> None:
-    global _predictor, _n_folds
+    global _predictor, _n_folds, _two_stage
+    _two_stage = None if os.environ.get("AUTILENS_CKPT") else _build_two_stage()
     _predictor, _n_folds = _build_predictor(_resolve_ckpt())
 
 
@@ -102,17 +125,28 @@ def health() -> dict:
         "task": getattr(_predictor, "task", None) if _predictor else None,
         "modality": _predictor.modality if _predictor else None,
         "ensemble_folds": _n_folds,
+        "two_stage": _two_stage is not None,
+        "families": (_two_stage.stage1.labels if _two_stage else None),
         "labels": _predictor.labels if _predictor else None,
     }
 
 
 @app.post("/predict")
-async def predict(file: UploadFile = File(...)) -> dict:
+async def predict(file: UploadFile = File(...),
+                  two_stage: bool = Query(False,
+                      description="Return Stage 1 behavior families alongside the "
+                                  "9 behaviors, with Stage 2 masked to the detected "
+                                  "families. Adds a `families` key; every existing "
+                                  "key keeps its meaning.")) -> dict:
     if _predictor is None:
         raise HTTPException(503, "model not loaded")
+    if two_stage and _two_stage is None:
+        raise HTTPException(409, "two-stage unavailable: needs a 4-family Stage 1 "
+                                 f"checkpoint and models/{STAGE2_CKPT}")
     path = _save_upload(file)
     try:
-        return _predictor.predict(path).to_dict()
+        engine = _two_stage if two_stage else _predictor
+        return engine.predict(path).to_dict()
     finally:
         _cleanup(path)
 

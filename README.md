@@ -157,6 +157,10 @@ python3 scripts/check_result_shapes.py
 # UI: asserts the stylesheet is delivered via st.html and never through the
 # markdown parser, which silently printed the whole sheet onto the page as text
 python3 scripts/check_ui_render.py
+
+# Nav: drives Chrome over CDP and clicks a nav link, because "the markup is
+# there" is not evidence that navigation works -- the links shipped inert once
+python3 scripts/check_nav_click.py
 ```
 
 Selection is by **measured accuracy**: every non-fold `models/*.pt` is matched to its
