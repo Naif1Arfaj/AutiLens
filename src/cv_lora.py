@@ -395,6 +395,8 @@ if __name__ == "__main__":
     ap.add_argument("--batch-size", type=int, default=4)
     ap.add_argument("--lora-lr", type=float, default=1e-4)
     ap.add_argument("--head-lr", type=float, default=5e-4)
+    ap.add_argument("--seed", type=int,
+                    help="overrides cfg.seed; changes both init and the fold\n                          assignment, matching how cv_fast seeds vary")
     ap.add_argument("--modality", choices=["vision", "audio", "av"])
     ap.add_argument("--tag", default=None)
     ap.add_argument("--audit-only", action="store_true",
@@ -415,5 +417,7 @@ if __name__ == "__main__":
     cfg = load_config(a.config)
     if a.modality:
         cfg["model"]["modality"] = a.modality
+    if a.seed is not None:
+        cfg["seed"] = a.seed
     run(cfg, a.tag, a.target, a.stages, a.rank, a.alpha,
         a.epochs, a.batch_size, a.lora_lr, a.head_lr, a.patience)
