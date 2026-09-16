@@ -10,9 +10,9 @@ Rows are grouped by class scope; scopes are never ranked against each other.
 
 | config | seeds | nested CV | modality | backbone | **OOF F1** | OOF P | OOF R | OOF AUPRC | OOF AUROC | OOF ECE | time |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| v3_stage1 | 3 | yes | av | swin3d_t | **0.572 ± 0.019** | 0.532 | 0.647 | 0.594 | 0.725 | 0.053 | 28s |
 | w5 | 3 | yes | av | swin3d_t | **0.569 ± 0.021** | 0.538 | 0.620 | 0.590 | 0.730 | 0.051 | 26s |
 | lora_A | 1 *(provisional)* | yes | av | swin3d_t+lora | **0.567** | 0.516 | 0.651 | 0.575 | 0.698 | 0.053 | 28min |
-| v3_stage1 | 1 *(provisional)* | yes | av | swin3d_t | **0.566** | 0.538 | 0.615 | 0.597 | 0.710 | 0.068 | 26s |
 
 ## scope: 9-class (labels)
 

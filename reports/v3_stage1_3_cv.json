@@ -1,0 +1,141 @@
+{
+  "tag": "v3_stage1_3",
+  "target": "families",
+  "seed": 3,
+  "scope": "4-class (families)",
+  "modality": "av",
+  "backbone": "swin3d_t",
+  "audio_encoder": "resnet18_mel",
+  "folds": 5,
+  "inner_folds": 5,
+  "nested_cv": true,
+  "seconds": 27.4,
+  "min_precision": 0.4,
+  "calibrated": true,
+  "oof_macro_f1": 0.5516889403688081,
+  "oof_macro_auprc": 0.5931838312417863,
+  "oof_metrics": {
+    "macro_f1": 0.5516889403688081,
+    "micro_f1": 0.5950738916256157,
+    "macro_precision": 0.5402680070166279,
+    "macro_recall": 0.5977777592904577,
+    "macro_auroc": 0.7237785881712686,
+    "macro_auprc": 0.5931838312417863,
+    "ece": 0.05110486337616206,
+    "per_class": {
+      "Repetitive motor": {
+        "support": 179,
+        "f1": 0.7439613526570048,
+        "precision": 0.6553191489361702,
+        "recall": 0.8603351955307262,
+        "auroc": 0.7720956882968055,
+        "auprc": 0.7783264734343524,
+        "threshold": 0.2778358459472656,
+        "threshold_std": 0.09229343384504318
+      },
+      "Self-directed or aggressive": {
+        "support": 96,
+        "f1": 0.5512820512820513,
+        "precision": 0.7166666666666667,
+        "recall": 0.4479166666666667,
+        "auroc": 0.8121295327754533,
+        "auprc": 0.6969873939837854,
+        "threshold": 0.4523880183696747,
+        "threshold_std": 0.16069427132606506
+      },
+      "Social-communicative": {
+        "support": 111,
+        "f1": 0.5255474452554745,
+        "precision": 0.44171779141104295,
+        "recall": 0.6486486486486487,
+        "auroc": 0.6730614543114543,
+        "auprc": 0.49390562104813573,
+        "threshold": 0.29447758197784424,
+        "threshold_std": 0.1309811919927597
+      },
+      "Sensory reactivity": {
+        "support": 76,
+        "f1": 0.38596491228070173,
+        "precision": 0.3473684210526316,
+        "recall": 0.4342105263157895,
+        "auroc": 0.6378276773013615,
+        "auprc": 0.40351583650087175,
+        "threshold": 0.2670895457267761,
+        "threshold_std": 0.08940578252077103
+      }
+    },
+    "n_samples": 335
+  },
+  "inner_val_macro_f1": {
+    "mean": 0.5579105359902572,
+    "std": 0.05288163234411418,
+    "per_fold": [
+      0.5538302277432712,
+      0.5004928315412187,
+      0.5403036941905265,
+      0.5373376623376623,
+      0.6575882641386073
+    ]
+  },
+  "best_epochs": [
+    31,
+    2,
+    22,
+    25,
+    62
+  ],
+  "derived_baseline_oof_metrics": {
+    "macro_f1": 0.5339899889789839,
+    "micro_f1": 0.5784224841341795,
+    "macro_precision": 0.4740760002220403,
+    "macro_recall": 0.6309766677328608,
+    "macro_auroc": 0.7154837239456117,
+    "macro_auprc": 0.5619689071834781,
+    "ece": 0.059421133717396914,
+    "per_class": {
+      "Repetitive motor": {
+        "support": 179,
+        "f1": 0.7523809523809524,
+        "precision": 0.6556016597510373,
+        "recall": 0.88268156424581,
+        "auroc": 0.7850952585589456,
+        "auprc": 0.7749640080352798,
+        "threshold": 0.2634328305721283,
+        "threshold_std": 0.12630869448184967
+      },
+      "Self-directed or aggressive": {
+        "support": 96,
+        "f1": 0.5638297872340425,
+        "precision": 0.5760869565217391,
+        "recall": 0.5520833333333334,
+        "auroc": 0.8082723152022315,
+        "auprc": 0.6483016412928269,
+        "threshold": 0.33686569333076477,
+        "threshold_std": 0.1761292666196823
+      },
+      "Social-communicative": {
+        "support": 111,
+        "f1": 0.5015673981191222,
+        "precision": 0.38461538461538464,
+        "recall": 0.7207207207207207,
+        "auroc": 0.6685368404118405,
+        "auprc": 0.47270209630124005,
+        "threshold": 0.2890298664569855,
+        "threshold_std": 0.0975683405995369
+      },
+      "Sensory reactivity": {
+        "support": 76,
+        "f1": 0.3181818181818182,
+        "precision": 0.28,
+        "recall": 0.3684210526315789,
+        "auroc": 0.600030481609429,
+        "auprc": 0.35190788310456583,
+        "threshold": 0.2826119363307953,
+        "threshold_std": 0.08749140053987503
+      }
+    },
+    "n_samples": 335
+  },
+  "test_evaluated": false,
+  "test_note": "held-out test set deliberately NOT evaluated; it is reporting-only and is touched once, after the candidate is locked on outer-OOF performance (Phase 4)"
+}

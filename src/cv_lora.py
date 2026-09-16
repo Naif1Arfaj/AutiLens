@@ -200,7 +200,7 @@ class LoRAModel(nn.Module):
 
 
 def run(cfg, tag, target="labels", stages="last", rank=8, alpha=16,
-        epochs=12, batch_size=4, lora_lr=1e-4, head_lr=5e-4):
+        epochs=30, batch_size=4, lora_lr=1e-4, head_lr=5e-4, patience=None):
     import json
     import time
 
@@ -287,6 +287,12 @@ def run(cfg, tag, target="labels", stages="last", rank=8, alpha=16,
         ], weight_decay=1e-4)
 
         best, best_state, best_ep = -1.0, None, -1
+        # NOT head.early_stop_patience (25): that is tuned for the frozen pipeline,
+        # where epochs cost milliseconds and it runs 120 of them. A LoRA epoch is
+        # ~2 min, and the first run peaked at 7-10 across all folds, so 5 is
+        # generous here and 25 would never fire under a 30-epoch ceiling.
+        pat = int(patience if patience is not None
+                  else cfg["head"].get("lora_early_stop_patience", 5))
         for ep in range(1, epochs + 1):
             model.train()
             perm = np.random.permutation(inner_tr)
@@ -311,6 +317,14 @@ def run(cfg, tag, target="labels", stages="last", rank=8, alpha=16,
                 best, best_ep = f1, ep
                 best_state = {kk: vv.detach().cpu().clone()
                               for kk, vv in model.state_dict().items()}
+            # Early stopping, same as cv_fast. Without it the epoch count has to be
+            # guessed; with it, `epochs` is just a generous ceiling. Every fold of
+            # the first LoRA run peaked at 7-10 and then declined, so the remaining
+            # epochs were pure cost.
+            if ep - best_ep >= pat:
+                print(f"  fold {f}: early stop at ep{ep} "
+                      f"(no gain for {pat} epochs since ep{best_ep})")
+                break
         model.load_state_dict({kk: vv.to(device) for kk, vv in best_state.items()})
 
         # Fit + FREEZE on inner-val, then score the untouched outer fold.
@@ -373,7 +387,11 @@ if __name__ == "__main__":
     ap.add_argument("--rank", type=int, default=8)
     ap.add_argument("--alpha", type=int, default=16)
     ap.add_argument("--target", choices=["labels", "families"], default="labels")
-    ap.add_argument("--epochs", type=int, default=12)
+    ap.add_argument("--epochs", type=int, default=30,
+                    help="ceiling, not a target: early stopping decides")
+    ap.add_argument("--patience", type=int, default=None,
+                    help="stop after N epochs without an inner-val gain "
+                         "(default: head.early_stop_patience)")
     ap.add_argument("--batch-size", type=int, default=4)
     ap.add_argument("--lora-lr", type=float, default=1e-4)
     ap.add_argument("--head-lr", type=float, default=5e-4)
@@ -398,4 +416,4 @@ if __name__ == "__main__":
     if a.modality:
         cfg["model"]["modality"] = a.modality
     run(cfg, a.tag, a.target, a.stages, a.rank, a.alpha,
-        a.epochs, a.batch_size, a.lora_lr, a.head_lr)
+        a.epochs, a.batch_size, a.lora_lr, a.head_lr, a.patience)

@@ -124,7 +124,8 @@ head:
   weight_decay: 0.001
   epochs: 120             # cheap: each epoch is a few ms over cached vectors
   batch_size: 32
-  early_stop_patience: 25
+  early_stop_patience: 25        # frozen pipeline: epochs are milliseconds
+  lora_early_stop_patience: 5    # LoRA: ~2 min/epoch, and runs peak at 7-10
   mixup_alpha: 0.4        # multi-label mixup in FEATURE space (free with a cache)
   aggregate: "mean"       # mean | attention  (how to pool the V window/flip variants)
   loss: "focal"           # bce | focal
