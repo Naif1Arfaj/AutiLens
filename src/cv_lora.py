@@ -200,7 +200,8 @@ class LoRAModel(nn.Module):
 
 
 def run(cfg, tag, target="labels", stages="last", rank=8, alpha=16,
-        epochs=30, batch_size=4, lora_lr=1e-4, head_lr=5e-4, patience=None):
+        epochs=30, batch_size=4, lora_lr=1e-4, head_lr=5e-4, patience=None,
+        only_fold=None):
     import json
     import time
 
@@ -273,7 +274,11 @@ def run(cfg, tag, target="labels", stages="last", rank=8, alpha=16,
                 out[s:s + len(chunk)] = acc / len(list(wins))
         return out
 
-    for f in range(k):
+    # `only_fold` runs a single outer fold of the normal k-fold split. The split
+    # geometry is unchanged, so train/val sizes match a full run -- but OOF then
+    # covers 1/k of the pool, which is a DIAGNOSTIC, not a comparable result.
+    fold_ids = range(k) if only_fold is None else [int(only_fold)]
+    for f in fold_ids:
         outer_tr, outer_va = np.where(folds != f)[0], np.where(folds == f)[0]
         inner_tr, inner_va = _inner_split(subjects, outer_tr, inner_k,
                                           int(cfg["seed"]) + f)
@@ -339,7 +344,11 @@ def run(cfg, tag, target="labels", stages="last", rank=8, alpha=16,
         cals_all.append(cals_f); inner_f1.append(best); best_eps.append(best_ep)
         print(f"  fold {f}: best inner-val {best:.3f} @ep{best_ep}")
 
-    m = compute_metrics(y_t, oof_cal, names, oof_thr)
+    if only_fold is not None:
+        covered = np.where(folds == int(only_fold))[0]
+        m = compute_metrics(y_t[covered], oof_cal[covered], names, oof_thr[covered])
+    else:
+        m = compute_metrics(y_t, oof_cal, names, oof_thr)
     models_dir = cfg.resolve_path("models_dir"); models_dir.mkdir(parents=True, exist_ok=True)
     reports = cfg.resolve_path("reports_dir"); reports.mkdir(parents=True, exist_ok=True)
     torch.save({"folds": states, "cfg": json.loads(json.dumps(cfg)), "target": target,
@@ -353,7 +362,13 @@ def run(cfg, tag, target="labels", stages="last", rank=8, alpha=16,
     np.savez(models_dir / f"{tag}_oof.npz", prob=oof_raw, prob_cal=oof_cal, y=y_t,
              ids=np.array(list(meta.video_id)), thresholds=oof_thr, folds=folds)
 
-    result = {"tag": tag, "target": target, "seed": int(cfg["seed"]), "scope": f"{len(names)}-class ({target})",
+    result = {"tag": tag, "target": target,
+              "only_fold": only_fold,
+              "diagnostic": only_fold is not None,
+              "partial_oof_note": (
+                  f"single outer fold ({only_fold}) -- OOF covers {len(np.where(folds == int(only_fold))[0])}"
+                  f" of {n} clips. NOT comparable to full k-fold runs; diagnostic only."
+                  if only_fold is not None else None), "seed": int(cfg["seed"]), "scope": f"{len(names)}-class ({target})",
               "modality": cfg["model"]["modality"], "backbone": "swin3d_t+lora",
               "audio_encoder": cfg["features"]["audio_encoder"],
               "lora": {"stages": stages, "rank": rank, "alpha": alpha},
@@ -395,6 +410,10 @@ if __name__ == "__main__":
     ap.add_argument("--batch-size", type=int, default=4)
     ap.add_argument("--lora-lr", type=float, default=1e-4)
     ap.add_argument("--head-lr", type=float, default=5e-4)
+    ap.add_argument("--only-fold", type=int, default=None,
+                    help="run ONE outer fold of the k-fold split. Diagnostic: "
+                         "OOF then covers 1/k of the pool and is not "
+                         "comparable to full runs.")
     ap.add_argument("--seed", type=int,
                     help="overrides cfg.seed; changes both init and the fold\n                          assignment, matching how cv_fast seeds vary")
     ap.add_argument("--modality", choices=["vision", "audio", "av"])
@@ -420,4 +439,5 @@ if __name__ == "__main__":
     if a.seed is not None:
         cfg["seed"] = a.seed
     run(cfg, a.tag, a.target, a.stages, a.rank, a.alpha,
-        a.epochs, a.batch_size, a.lora_lr, a.head_lr, a.patience)
+        a.epochs, a.batch_size, a.lora_lr, a.head_lr, a.patience,
+        a.only_fold)

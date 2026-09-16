@@ -51,6 +51,10 @@ def collect(reports):
     rows = []
     for f in sorted(reports.glob("*_cv.json")):
         d = json.loads(f.read_text())
+        if d.get("diagnostic"):
+            # single-fold runs cover 1/k of the pool; ranking them beside full
+            # k-fold runs would compare different amounts of evidence
+            continue
         oof = d.get("oof_metrics") or {}
         nested = bool(d.get("nested_cv", False))
         rows.append({
