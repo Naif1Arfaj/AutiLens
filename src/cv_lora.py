@@ -339,7 +339,7 @@ def run(cfg, tag, target="labels", stages="last", rank=8, alpha=16,
     np.savez(models_dir / f"{tag}_oof.npz", prob=oof_raw, prob_cal=oof_cal, y=y_t,
              ids=np.array(list(meta.video_id)), thresholds=oof_thr, folds=folds)
 
-    result = {"tag": tag, "target": target, "scope": f"{len(names)}-class ({target})",
+    result = {"tag": tag, "target": target, "seed": int(cfg["seed"]), "scope": f"{len(names)}-class ({target})",
               "modality": cfg["model"]["modality"], "backbone": "swin3d_t+lora",
               "audio_encoder": cfg["features"]["audio_encoder"],
               "lora": {"stages": stages, "rank": rank, "alpha": alpha},

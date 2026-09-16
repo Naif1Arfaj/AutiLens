@@ -302,7 +302,7 @@ def run(cfg, tag: str, target: str = TARGET_LABELS, eval_test: bool = False) -> 
              y=y_t, ids=np.array(pool["ids"]), thresholds=primary["thr"], folds=folds)
 
     result = {
-        "tag": tag, "target": target, "scope": f"{len(names)}-class ({target})",
+        "tag": tag, "target": target, "seed": int(cfg["seed"]), "scope": f"{len(names)}-class ({target})",
         "modality": cfg["model"]["modality"],
         "backbone": (cfg["features"]["vision_backbone"]
                      if isinstance(cfg["features"]["vision_backbone"], str)

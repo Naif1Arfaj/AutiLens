@@ -1,6 +1,8 @@
 [
   {
     "tag": "audio_cnn_cv",
+    "config": "audio_cnn_cv",
+    "seed": null,
     "scope": "?-class (legacy)",
     "nested": false,
     "modality": "audio",
@@ -18,6 +20,8 @@
   },
   {
     "tag": "audio_fast",
+    "config": "audio_fast",
+    "seed": null,
     "scope": "9-class (legacy)",
     "nested": false,
     "modality": "audio",
@@ -35,6 +39,8 @@
   },
   {
     "tag": "autilens_v2",
+    "config": "autilens_v2",
+    "seed": null,
     "scope": "9-class (legacy)",
     "nested": false,
     "modality": "av",
@@ -52,6 +58,8 @@
   },
   {
     "tag": "av_r2p1d_cv",
+    "config": "av_r2p1d_cv",
+    "seed": null,
     "scope": "?-class (legacy)",
     "nested": false,
     "modality": "av",
@@ -69,6 +77,8 @@
   },
   {
     "tag": "av_r2p1d_fast",
+    "config": "av_r2p1d_fast",
+    "seed": null,
     "scope": "9-class (legacy)",
     "nested": false,
     "modality": "av",
@@ -86,6 +96,8 @@
   },
   {
     "tag": "av_swin_fast",
+    "config": "av_swin_fast",
+    "seed": null,
     "scope": "9-class (legacy)",
     "nested": false,
     "modality": "av",
@@ -103,6 +115,8 @@
   },
   {
     "tag": "av_swin_nocal",
+    "config": "av_swin_nocal",
+    "seed": null,
     "scope": "9-class (legacy)",
     "nested": false,
     "modality": "av",
@@ -120,6 +134,8 @@
   },
   {
     "tag": "av_swin_nofloor",
+    "config": "av_swin_nofloor",
+    "seed": null,
     "scope": "9-class (legacy)",
     "nested": false,
     "modality": "av",
@@ -137,6 +153,8 @@
   },
   {
     "tag": "av_swin_nomixup",
+    "config": "av_swin_nomixup",
+    "seed": null,
     "scope": "9-class (legacy)",
     "nested": false,
     "modality": "av",
@@ -153,7 +171,28 @@
     "test": 0.43472272295859327
   },
   {
+    "tag": "lora_A",
+    "config": "lora_A",
+    "seed": null,
+    "scope": "4-class (families)",
+    "nested": true,
+    "modality": "av",
+    "backbone": "swin3d_t+lora",
+    "oof_f1": 0.5665918989666849,
+    "oof_p": 0.5160369438365846,
+    "oof_r": 0.6514073430972872,
+    "oof_auprc": 0.5747590527967836,
+    "oof_auroc": 0.6976810055405619,
+    "oof_ece": 0.052633728054630124,
+    "derived": null,
+    "secs": 1678.7,
+    "test_evaluated": false,
+    "test": null
+  },
+  {
     "tag": "v3_labels_nested",
+    "config": "v3_labels_nested",
+    "seed": null,
     "scope": "9-class (labels)",
     "nested": true,
     "modality": "av",
@@ -171,6 +210,8 @@
   },
   {
     "tag": "v3_stage1",
+    "config": "v3_stage1",
+    "seed": null,
     "scope": "4-class (families)",
     "nested": true,
     "modality": "av",
@@ -188,6 +229,8 @@
   },
   {
     "tag": "vision_r2p1d_cv",
+    "config": "vision_r2p1d_cv",
+    "seed": null,
     "scope": "?-class (legacy)",
     "nested": false,
     "modality": "vision",
@@ -205,6 +248,8 @@
   },
   {
     "tag": "vision_swin_fast",
+    "config": "vision_swin_fast",
+    "seed": null,
     "scope": "9-class (legacy)",
     "nested": false,
     "modality": "vision",
@@ -219,5 +264,62 @@
     "secs": 11.1,
     "test_evaluated": true,
     "test": 0.49386766058148157
+  },
+  {
+    "tag": "w5_1",
+    "config": "w5",
+    "seed": null,
+    "scope": "4-class (families)",
+    "nested": true,
+    "modality": "av",
+    "backbone": "swin3d_t",
+    "oof_f1": 0.5551839882728228,
+    "oof_p": 0.5558119653264562,
+    "oof_r": 0.5681683778750818,
+    "oof_auprc": 0.6057515440650632,
+    "oof_auroc": 0.7264605585796806,
+    "oof_ece": 0.056941754685075424,
+    "derived": 0.5449818506112138,
+    "secs": 26.4,
+    "test_evaluated": false,
+    "test": null
+  },
+  {
+    "tag": "w5_2",
+    "config": "w5",
+    "seed": null,
+    "scope": "4-class (families)",
+    "nested": true,
+    "modality": "av",
+    "backbone": "swin3d_t",
+    "oof_f1": 0.5981774082323078,
+    "oof_p": 0.5518711267398806,
+    "oof_r": 0.6637007969635322,
+    "oof_auprc": 0.5871296497241749,
+    "oof_auroc": 0.7417010816792804,
+    "oof_ece": 0.04405263328243658,
+    "derived": 0.5712306384680238,
+    "secs": 23.2,
+    "test_evaluated": false,
+    "test": null
+  },
+  {
+    "tag": "w5_3",
+    "config": "w5",
+    "seed": null,
+    "scope": "4-class (families)",
+    "nested": true,
+    "modality": "av",
+    "backbone": "swin3d_t",
+    "oof_f1": 0.5521838969394308,
+    "oof_p": 0.5056070104323781,
+    "oof_r": 0.6269672026113147,
+    "oof_auprc": 0.5783559682412713,
+    "oof_auroc": 0.7228050268306732,
+    "oof_ece": 0.051046532916892026,
+    "derived": 0.556018009395851,
+    "secs": 27.9,
+    "test_evaluated": false,
+    "test": null
   }
 ]

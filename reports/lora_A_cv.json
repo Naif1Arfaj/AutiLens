@@ -1,0 +1,93 @@
+{
+  "tag": "lora_A",
+  "target": "families",
+  "scope": "4-class (families)",
+  "modality": "av",
+  "backbone": "swin3d_t+lora",
+  "audio_encoder": "resnet18_mel",
+  "lora": {
+    "stages": "last",
+    "rank": 8,
+    "alpha": 16
+  },
+  "folds": 5,
+  "inner_folds": 5,
+  "nested_cv": true,
+  "seconds": 1678.7,
+  "min_precision": 0.4,
+  "calibrated": true,
+  "oof_macro_f1": 0.5665918989666849,
+  "oof_macro_auprc": 0.5747590527967836,
+  "oof_metrics": {
+    "macro_f1": 0.5665918989666849,
+    "micro_f1": 0.5834896810506567,
+    "macro_precision": 0.5160369438365846,
+    "macro_recall": 0.6514073430972872,
+    "macro_auroc": 0.6976810055405619,
+    "macro_auprc": 0.5747590527967836,
+    "ece": 0.052633728054630124,
+    "per_class": {
+      "Repetitive motor": {
+        "support": 179,
+        "f1": 0.764367816091954,
+        "precision": 0.7869822485207101,
+        "recall": 0.7430167597765364,
+        "auroc": 0.828230196246956,
+        "auprc": 0.8475958395026105,
+        "threshold": 0.37141790986061096,
+        "threshold_std": 0.11274327337741852
+      },
+      "Self-directed or aggressive": {
+        "support": 96,
+        "f1": 0.6824644549763034,
+        "precision": 0.6260869565217392,
+        "recall": 0.75,
+        "auroc": 0.8351420850767085,
+        "auprc": 0.7186176201779727,
+        "threshold": 0.3079104423522949,
+        "threshold_std": 0.1638759821653366
+      },
+      "Social-communicative": {
+        "support": 111,
+        "f1": 0.47719298245614034,
+        "precision": 0.39080459770114945,
+        "recall": 0.6126126126126126,
+        "auroc": 0.5396155083655083,
+        "auprc": 0.37119213113448846,
+        "threshold": 0.295895516872406,
+        "threshold_std": 0.1282922476530075
+      },
+      "Sensory reactivity": {
+        "support": 76,
+        "f1": 0.34234234234234234,
+        "precision": 0.2602739726027397,
+        "recall": 0.5,
+        "auroc": 0.5877362324730746,
+        "auprc": 0.36163062037206284,
+        "threshold": 0.307537317276001,
+        "threshold_std": 0.07259257137775421
+      }
+    },
+    "n_samples": 335
+  },
+  "inner_val_macro_f1": {
+    "mean": 0.45889288126168337,
+    "std": 0.04835984750554574,
+    "per_fold": [
+      0.4631269592476489,
+      0.39734783734783735,
+      0.44771825396825393,
+      0.5451820219921,
+      0.44108933375257664
+    ]
+  },
+  "best_epochs": [
+    10,
+    9,
+    10,
+    7,
+    10
+  ],
+  "test_evaluated": false,
+  "test_note": "held-out test set deliberately NOT evaluated"
+}
